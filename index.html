@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="취업을 위한 자기소개서와 포트폴리오를 한 페이지에 정리한 웹 이력서입니다."
+    />
+    <title>한윤욱 | 자기소개서 포트폴리오</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">본문으로 이동</a>
+
+    <header class="topbar">
+      <a class="brand" href="#intro" aria-label="홈으로 이동">
+        <span class="brand-mark">HY</span>
+        <span class="brand-text">Portfolio</span>
+      </a>
+
+      <nav class="nav" aria-label="주요 섹션">
+        <a href="#career">경력</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#research">연구</a>
+        <a href="#skills">기술</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="icon-button theme-toggle" type="button" aria-label="테마 변경">
+        <span class="theme-icon" aria-hidden="true">☾</span>
+      </button>
+    </header>
+
+    <main id="main">
+      <section class="intro section-shell" id="intro" aria-labelledby="intro-title">
+        <div class="intro-copy">
+          <p class="eyebrow">Job Application Portfolio</p>
+          <h1 id="intro-title">한윤욱</h1>
+          <p class="role">UAV Perception &amp; GNC Engineer</p>
+          <p class="summary">
+            문제를 구조화하고, 사용자에게 필요한 기능을 명확한 화면과 안정적인 코드로
+            연결하는 개발자입니다. 빠른 실행력과 꼼꼼한 문서화를 바탕으로 팀이 신뢰할 수
+            있는 결과물을 만드는 데 집중합니다.
+          </p>
+
+          <div class="intro-actions" aria-label="주요 연락 링크">
+            <a class="primary-action" href="#projects">프로젝트 보기</a>
+            <a class="secondary-action" href="#contact">연락처 보기</a>
+          </div>
+        </div>
+
+        <div class="profile-panel" aria-label="프로필 요약">
+          <div class="profile-media-grid">
+            <figure class="profile-photo-card">
+              <img
+                src="assets/profile-photo.png"
+                alt="한윤욱 증명사진"
+                onerror="this.onerror=null; this.src='assets/profile-visual.svg';"
+              />
+              <figcaption>Profile</figcaption>
+            </figure>
+
+            <figure class="research-photo-card">
+              <img
+                src="assets/research-detection.png"
+                alt="객체 탐지 기반 주요 연구 결과 이미지"
+              />
+              <figcaption>Research</figcaption>
+            </figure>
+          </div>
+
+          <div class="profile-note">
+            <strong>주요 연구 방향</strong>
+            <p>
+              UAV/UAM 환경에서 객체 인식, 랜딩 패드 탐지, 비행 제어를 연결하는
+              인공지능 기반 자동화 시스템을 연구합니다.
+            </p>
+          </div>
+
+          <div class="profile-stats">
+            <div>
+              <strong>UAV</strong>
+              <span>Perception</span>
+            </div>
+            <div>
+              <strong>GNC</strong>
+              <span>Control</span>
+            </div>
+            <div>
+              <strong>AI</strong>
+              <span>Detection</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell" id="career" aria-labelledby="career-title">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2 id="career-title">경력</h2>
+          <p>역할, 책임, 기여한 결과를 중심으로 정리한 경력 타임라인입니다.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <time datetime="2025">2025.03 - 현재</time>
+            <div>
+              <h3>회사명 / 직무명</h3>
+              <p>
+                서비스 운영 효율을 높이기 위해 주요 화면과 데이터 흐름을 개선했습니다.
+              </p>
+              <ul class="compact-list">
+                <li>핵심 기능 개발 및 유지보수</li>
+                <li>사용자 피드백 기반 UI 개선</li>
+                <li>협업 문서화와 배포 프로세스 정리</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <time datetime="2024">2024.01 - 2025.02</time>
+            <div>
+              <h3>프로젝트 팀 / 역할명</h3>
+              <p>
+                팀 프로젝트에서 기획부터 구현, 테스트까지 담당하며 완성도를 높였습니다.
+              </p>
+              <ul class="compact-list">
+                <li>요구사항 분석과 화면 설계</li>
+                <li>반응형 웹 구현</li>
+                <li>이슈 관리와 코드 리뷰 참여</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Projects</p>
+          <h2 id="projects-title">프로젝트 소개</h2>
+          <p>카드를 클릭하면 문제 정의, 구현 내용, 사용 기술, 성과를 자세히 볼 수 있습니다.</p>
+        </div>
+
+        <div class="project-grid">
+          <button
+            class="project-card"
+            type="button"
+            data-project="portfolio"
+            aria-haspopup="dialog"
+          >
+            <span class="project-type">Web</span>
+            <h3>개인 포트폴리오 웹사이트</h3>
+            <p>정적 HTML, CSS, JavaScript 기반의 채용용 자기소개서 페이지입니다.</p>
+            <span class="project-meta">HTML · CSS · JavaScript</span>
+          </button>
+
+          <button
+            class="project-card"
+            type="button"
+            data-project="dashboard"
+            aria-haspopup="dialog"
+          >
+            <span class="project-type">Dashboard</span>
+            <h3>데이터 분석 대시보드</h3>
+            <p>사용자가 지표를 빠르게 확인할 수 있는 카드형 분석 화면을 설계했습니다.</p>
+            <span class="project-meta">React · Chart · API</span>
+          </button>
+
+          <button
+            class="project-card"
+            type="button"
+            data-project="automation"
+            aria-haspopup="dialog"
+          >
+            <span class="project-type">Automation</span>
+            <h3>업무 자동화 도구</h3>
+            <p>반복 업무를 줄이기 위해 파일 처리와 리포트 생성을 자동화했습니다.</p>
+            <span class="project-meta">Python · Excel · Workflow</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section-shell resume-section" id="research" aria-labelledby="research-title">
+        <div class="section-heading resume-heading">
+          <p class="eyebrow">Research</p>
+          <h2 id="research-title">3. 논문 및 연구</h2>
+        </div>
+
+        <div class="paper-records" aria-label="논문 및 연구 목록">
+          <div class="paper-record-head">
+            <h3>논문 및 연구 실적</h3>
+          </div>
+
+          <button class="paper-entry" type="button" data-paper="auto-labeling" aria-haspopup="dialog">
+            <span class="paper-title-line">
+              <strong class="paper-title">
+                [게임 엔진 기반 가상 환경을 이용한 자동 레이블링 및 랜딩 패드 인식 기술 연구]
+              </strong>
+              <span class="paper-date">2024년 7월</span>
+            </span>
+            <span class="paper-bullets">
+              <span>가상 도심 환경에서 랜딩 패드 자동 레이블링 데이터셋 생성</span>
+              <span>학습된 알고리즘을 가상 환경 비행 시나리오에서 검증</span>
+            </span>
+          </button>
+
+          <button class="paper-entry" type="button" data-paper="virtual-dataset" aria-haspopup="dialog">
+            <span class="paper-title-line">
+              <strong class="paper-title">
+                [가상 환경 데이터셋 기반 심층 신경망을 이용한 랜딩 패드 인식 실험]
+              </strong>
+              <span class="paper-date">2024년 11월</span>
+            </span>
+            <span class="paper-bullets">
+              <span>가상 환경 데이터셋으로 심층 신경망 기반 객체 인식 알고리즘 학습</span>
+              <span>데이터셋 구성별 성능 비교 및 실제 UAM 축소기 착륙 과정 검증</span>
+            </span>
+          </button>
+
+          <button class="paper-entry" type="button" data-paper="distance-estimation" aria-haspopup="dialog">
+            <span class="paper-title-line">
+              <strong class="paper-title">
+                [딥러닝 기반 객체 인식을 활용한 랜딩 패드 주변 객체 상대 거리 추정]
+              </strong>
+              <span class="paper-date">2025년 4월</span>
+            </span>
+            <span class="paper-bullets">
+              <span>UAM의 안전한 착륙을 위한 랜딩 패드 주변 객체 상대 거리 추정 모델 구현</span>
+              <span>객체 인식 결과를 거리 추정 흐름과 연결</span>
+            </span>
+          </button>
+
+          <button class="paper-entry" type="button" data-paper="tensorrt-yolo" aria-haspopup="dialog">
+            <span class="paper-title-line">
+              <strong class="paper-title">
+                [Jetson Orin Nano에서 TensorRT로 최적화된 YOLOv11 객체 탐지 모델의 성능 분석]
+              </strong>
+              <span class="paper-date">2025년 11월</span>
+            </span>
+            <span class="paper-bullets">
+              <span>Jetson Orin Nano 환경에서 YOLOv11 객체 탐지 모델 최적화</span>
+              <span>TensorRT 적용 전후 추론 성능 비교 및 임베디드 활용 가능성 분석</span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section-shell resume-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading resume-heading">
+          <p class="eyebrow">Tech Stack</p>
+          <h2 id="skills-title">4. 기술 스택</h2>
+        </div>
+
+        <div class="skill-levels" aria-label="기술 스택 숙련도">
+          <div class="skill-row" style="--level: 70%">
+            <div>
+              <strong>MATLAB / Simulink</strong>
+              <span>비행 동역학 및 제어 모델링</span>
+            </div>
+            <meter min="0" max="5" value="3.5">3.5 / 5</meter>
+            <b>3.5</b>
+          </div>
+          <div class="skill-row" style="--level: 40%">
+            <div>
+              <strong>Python</strong>
+              <span>데이터 처리 및 실험 자동화</span>
+            </div>
+            <meter min="0" max="5" value="2">2 / 5</meter>
+            <b>2</b>
+          </div>
+          <div class="skill-row" style="--level: 70%">
+            <div>
+              <strong>Ardupilot</strong>
+              <span>무인항공기 제어 시스템 운용</span>
+            </div>
+            <meter min="0" max="5" value="3.5">3.5 / 5</meter>
+            <b>3.5</b>
+          </div>
+          <div class="skill-row" style="--level: 70%">
+            <div>
+              <strong>PX4</strong>
+              <span>비행 제어 및 시뮬레이션 연동</span>
+            </div>
+            <meter min="0" max="5" value="3.5">3.5 / 5</meter>
+            <b>3.5</b>
+          </div>
+          <div class="skill-row" style="--level: 70%">
+            <div>
+              <strong>데이터 분석</strong>
+              <span>실험 데이터 비교 및 성능 분석</span>
+            </div>
+            <meter min="0" max="5" value="3.5">3.5 / 5</meter>
+            <b>3.5</b>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell resume-section" id="awards" aria-labelledby="awards-title">
+        <div class="section-heading resume-heading">
+          <p class="eyebrow">Certificates & Awards</p>
+          <h2 id="awards-title">5. 자격증 및 수상 내역</h2>
+        </div>
+
+        <div class="credential-layout">
+          <section aria-labelledby="certificate-title">
+            <h3 id="certificate-title">자격증</h3>
+            <ul class="resume-list">
+              <li>초경량비행장치 조종 자격증 1종 (2019)</li>
+              <li>1종 대형 운전면허</li>
+              <li>버스운전자격</li>
+            </ul>
+          </section>
+
+          <section aria-labelledby="award-title">
+            <h3 id="award-title">수상 내역</h3>
+            <ul class="resume-list rich-list">
+              <li class="award-clickable">
+                <button type="button" class="award-trigger" data-award="ip-mobility">
+                  <strong>2024년 IP & 모빌리티 융합 디자인 경진대회 최우수상</strong>
+                  <span>청주대학교 신기술융합디자인 혁신인재양성사업단장</span>
+                  <span>협소 골목길을 빠르게 돌파해 다양한 장비를 전달하고 전개를 돕는 무인 로봇</span>
+                </button>
+              </li>
+              <li>
+                <strong>CJU 연구 연계 교육 우수사례 (2025년)</strong>
+                <span>자율 군집 드론 기술 시뮬레이션</span>
+              </li>
+              <li>대전제어로봇시스템학회 학부생 논문경진대회 참가 경험 (2024년)</li>
+              <li class="award-clickable">
+                <button type="button" class="award-trigger" data-award="industry-challenge">
+                  <strong>산학프로젝트챌린지 본선 참가 경험</strong>
+                </button>
+              </li>
+              <li class="award-clickable">
+                <button type="button" class="award-trigger" data-award="excellent-paper">
+                  <strong>항공우주시스템공학회 추계학술대회 우수발표 논문 수상 (발표자) (2025년)</strong>
+                </button>
+              </li>
+              <li class="award-clickable">
+                <button type="button" class="award-trigger" data-award="aiaa">
+                  <strong>AIAA Scitech 구두 발표 (2026)</strong>
+                </button>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+
+      <section class="section-shell resume-section" id="education" aria-labelledby="education-title">
+        <div class="section-heading resume-heading">
+          <p class="eyebrow">Education</p>
+          <h2 id="education-title">6. 학력</h2>
+        </div>
+
+        <div class="education-list">
+          <article>
+            <strong>[청주대학교]</strong>
+            <span>무인항공기학과 학사</span>
+            <time datetime="2019-03">2019년 3월 ~ 2025년 2월</time>
+          </article>
+          <article>
+            <strong>[청주대학교]</strong>
+            <span>기계항공시스템공학과 석사</span>
+            <time datetime="2025-03">2025년 3월 ~ 2027년 2월</time>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell resume-section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="section-heading resume-heading">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Contact</h2>
+        </div>
+
+        <address class="contact-grid">
+          <div class="contact-item">
+            <span>국가</span>
+            <strong>South Korea</strong>
+          </div>
+          <div class="contact-item">
+            <span>소속</span>
+            <strong>intRoLAB</strong>
+          </div>
+          <a href="tel:01090641414" class="contact-item">
+            <span>전화</span>
+            <strong>010-9064-1414</strong>
+          </a>
+          <a href="mailto:wldbsehdtjs@naver.com" class="contact-item">
+            <span>이메일</span>
+            <strong>wldbsehdtjs@naver.com</strong>
+          </a>
+        </address>
+      </section>
+    </main>
+
+    <dialog class="project-dialog" aria-labelledby="dialog-title">
+      <div class="dialog-surface">
+        <button class="icon-button dialog-close" type="button" aria-label="프로젝트 상세 닫기">
+          ×
+        </button>
+        <p class="eyebrow dialog-category"></p>
+        <h2 id="dialog-title"></h2>
+        <p class="dialog-summary"></p>
+
+        <div class="detail-grid">
+          <section>
+            <h3>문제 정의</h3>
+            <p class="dialog-problem"></p>
+          </section>
+          <section>
+            <h3>구현 내용</h3>
+            <ul class="dialog-features"></ul>
+          </section>
+          <section>
+            <h3>기술 스택</h3>
+            <div class="chips dialog-stack"></div>
+          </section>
+          <section>
+            <h3>성과</h3>
+            <p class="dialog-impact"></p>
+          </section>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="paper-dialog" aria-labelledby="paper-dialog-title">
+      <div class="dialog-surface">
+        <button class="icon-button paper-dialog-close" type="button" aria-label="논문 상세 닫기">
+          ×
+        </button>
+        <p class="eyebrow paper-dialog-category"></p>
+        <h2 id="paper-dialog-title"></h2>
+        <p class="dialog-summary paper-dialog-summary"></p>
+
+        <div class="detail-grid">
+          <section>
+            <h3>초록</h3>
+            <p class="paper-dialog-abstract"></p>
+          </section>
+          <section>
+            <h3>나의 기여</h3>
+            <ul class="paper-dialog-contribution dialog-features"></ul>
+          </section>
+          <section>
+            <h3>키워드</h3>
+            <div class="chips paper-dialog-keywords"></div>
+          </section>
+          <section>
+            <h3>발표 정보</h3>
+            <p class="paper-dialog-publication"></p>
+          </section>
+        </div>
+
+        <a class="paper-link" href="#" target="_blank" rel="noreferrer" hidden>논문 링크 보기</a>
+      </div>
+    </dialog>
+
+    <dialog class="award-dialog" aria-labelledby="award-dialog-title">
+      <div class="dialog-surface">
+        <button class="icon-button award-dialog-close" type="button" aria-label="수상 사진 닫기">
+          ×
+        </button>
+        <p class="eyebrow award-dialog-category">Awards</p>
+        <h2 id="award-dialog-title"></h2>
+        <p class="dialog-summary award-dialog-summary"></p>
+        <div class="award-gallery"></div>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
