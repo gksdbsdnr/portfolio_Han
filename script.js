@@ -199,70 +199,65 @@ const awards = {
 };
 
 const skills = {
-  matlab: {
-    title: "MATLAB / Simulink",
-    summary:
-      "비행 동역학 해석, 제어기 설계, 시뮬레이션 검증에 활용한 핵심 도구입니다.",
-    experience: [
-      "비행 동역학 및 제어 과목에서 항공기 모델링과 제어기 설계 수행",
-      "Simulink 기반 블록 다이어그램으로 시스템 응답 확인",
-      "실험 결과를 그래프와 수치로 정리해 성능 비교",
-    ],
-    tags: ["Flight Dynamics", "Control", "Simulation", "Modeling"],
-    video: "",
-    videoCaption: "MATLAB / Simulink 시뮬레이션 영상",
-  },
   python: {
     title: "Python",
-    summary:
-      "실험 데이터 정리, 결과 분석, 자동화 스크립트 작성에 활용합니다.",
+    summary: "실험 데이터 처리, 객체 탐지 결과 분석, 자동화 스크립트 작성에 활용합니다.",
     experience: [
       "객체 탐지 실험 결과 정리와 데이터 처리",
       "반복 실험 파일 관리 및 분석 자동화",
-      "시각화와 리포트 작성 보조 도구로 활용",
+      "성능 비교 결과를 그래프와 표로 정리",
     ],
     tags: ["Data Processing", "Automation", "Analysis"],
     video: "",
     videoCaption: "Python 기반 실험 자동화 영상",
   },
-  ardupilot: {
-    title: "Ardupilot",
-    summary:
-      "무인항공기 제어 시스템과 오픈소스 비행 제어 구조를 이해하고 운용하는 데 활용했습니다.",
+  matlab: {
+    title: "MATLAB / Simulink",
+    summary: "비행 동역학 해석, 제어기 설계, 시뮬레이션 검증에 활용한 도구입니다.",
     experience: [
-      "드론 및 무인 시스템 프로젝트에서 비행 제어 구조 학습",
-      "미션 수행 흐름과 파라미터 기반 제어 개념 정리",
-      "PX4와 함께 UAV 제어 시스템 비교 경험",
+      "비행 동역학 및 제어 과목에서 항공기 모델링 수행",
+      "Simulink 기반 블록 다이어그램으로 시스템 응답 확인",
+      "제어기 성능을 수치와 그래프로 비교",
     ],
-    tags: ["UAV", "Autopilot", "Mission", "Flight Control"],
+    tags: ["Flight Dynamics", "Control", "Simulation"],
     video: "",
-    videoCaption: "Ardupilot 운용 또는 비행 테스트 영상",
+    videoCaption: "MATLAB / Simulink 시뮬레이션 영상",
   },
-  px4: {
-    title: "PX4",
-    summary:
-      "UAV/AAM 영상 항법 구현과 가상 환경 연동 과정에서 활용한 비행 제어 플랫폼입니다.",
+  arduino: {
+    title: "Arduino",
+    summary: "드론 제작, 센서 제어, 교육용 실습 과제에서 활용한 임베디드 플랫폼입니다.",
     experience: [
-      "GNSS-denied 환경에서 영상 항법 기술 조사 및 구현 경험",
-      "가상 환경과 비행 제어 시스템 연동 흐름 이해",
-      "시뮬레이션 기반 비행 검증 과정 수행",
+      "드론코더300 및 아두이노 드론 제작 실습 경험",
+      "센서 입력과 모터 제어 흐름 이해",
+      "교육용 드론 실습 구성 및 테스트",
     ],
-    tags: ["PX4", "AAM", "Simulation", "Navigation"],
+    tags: ["Arduino", "Drone", "Sensor", "Embedded"],
     video: "",
-    videoCaption: "PX4 시뮬레이션 또는 비행 연동 영상",
+    videoCaption: "Arduino 드론 제작 또는 실습 영상",
   },
-  "data-analysis": {
-    title: "데이터 분석",
-    summary:
-      "가상 환경 데이터셋, 객체 인식 결과, 모델 성능을 비교 분석하는 데 활용했습니다.",
+  unreal: {
+    title: "Unreal Engine",
+    summary: "AAM 영상 항법과 객체 인식 검증을 위한 가상 환경 구현에 활용했습니다.",
     experience: [
-      "가상 환경 데이터셋 구성별 객체 인식 성능 비교",
-      "YOLOv11 및 TensorRT 최적화 결과 분석",
-      "실험 결과를 논문과 발표 자료 형태로 정리",
+      "GNSS-denied 환경의 가상 시나리오 구현",
+      "영상 기반 항법과 데이터셋 생성 흐름 검토",
+      "가상 환경 기반 실험 조건 구성",
     ],
-    tags: ["Dataset", "Object Detection", "TensorRT", "Performance"],
+    tags: ["Unreal Engine", "Virtual Environment", "AAM"],
     video: "",
-    videoCaption: "객체 탐지 또는 성능 분석 결과 영상",
+    videoCaption: "Unreal Engine 가상 환경 시연 영상",
+  },
+  jetson: {
+    title: "Jetson",
+    summary: "임베디드 환경에서 객체 탐지 모델을 운용하고 최적화하는 데 활용했습니다.",
+    experience: [
+      "Jetson Orin Nano 기반 객체 탐지 실험",
+      "YOLOv11 모델의 TensorRT 최적화 적용",
+      "추론 성능 비교와 임베디드 적용 가능성 분석",
+    ],
+    tags: ["Jetson", "TensorRT", "YOLOv11", "Edge AI"],
+    video: "",
+    videoCaption: "Jetson 기반 객체 탐지 시연 영상",
   },
 };
 
