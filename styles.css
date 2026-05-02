@@ -1094,6 +1094,15 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .education-list article {
+    gap: 8px;
+  }
+
+  .education-list small,
+  .education-list time {
+    justify-self: start;
+  }
+
   .skill-row {
     grid-template-columns: minmax(0, 1fr) 120px 40px;
   }
@@ -1174,6 +1183,14 @@ h3 {
 
   .paper-bullets span::before {
     left: -18px;
+  }
+
+  .education-list {
+    gap: 20px;
+  }
+
+  .education-list article {
+    gap: 6px;
   }
 
   .skill-row {
