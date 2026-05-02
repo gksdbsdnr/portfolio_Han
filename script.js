@@ -284,6 +284,37 @@ function setDialogText(parent, selector, value) {
   parent.querySelector(selector).textContent = value;
 }
 
+const modalDialogs = [dialog, paperDialog, awardDialog, skillDialog];
+
+function openModal(modal) {
+  if (!modal.open) {
+    history.pushState({ portfolioModal: true }, "");
+    modal.showModal();
+  }
+}
+
+function closeModal(modal, updateHistory = true) {
+  if (modal.open) {
+    modal.close();
+  }
+
+  if (updateHistory && history.state?.portfolioModal) {
+    history.back();
+  }
+}
+
+function closeOpenModals(updateHistory = true) {
+  modalDialogs.forEach((modal) => {
+    if (modal.open) {
+      modal.close();
+    }
+  });
+
+  if (updateHistory && history.state?.portfolioModal) {
+    history.back();
+  }
+}
+
 function openProject(projectId) {
   const project = projects[projectId];
   if (!project) return;
@@ -312,7 +343,7 @@ function openProject(projectId) {
     }),
   );
 
-  dialog.showModal();
+  openModal(dialog);
 }
 
 function openPaper(paperId) {
@@ -351,7 +382,7 @@ function openPaper(paperId) {
     paperLink.hidden = true;
   }
 
-  paperDialog.showModal();
+  openModal(paperDialog);
 }
 
 function openAward(awardId) {
@@ -377,7 +408,7 @@ function openAward(awardId) {
     }),
   );
 
-  awardDialog.showModal();
+  openModal(awardDialog);
 }
 
 function openSkill(skillId) {
@@ -421,7 +452,7 @@ function openSkill(skillId) {
     videoWrap.hidden = true;
   }
 
-  skillDialog.showModal();
+  openModal(skillDialog);
 }
 
 document.querySelectorAll(".project-card").forEach((card) => {
@@ -440,36 +471,40 @@ document.querySelectorAll(".skill-row").forEach((item) => {
   item.addEventListener("click", () => openSkill(item.dataset.skill));
 });
 
-closeButton.addEventListener("click", () => dialog.close());
-paperCloseButton.addEventListener("click", () => paperDialog.close());
-awardCloseButton.addEventListener("click", () => awardDialog.close());
-skillCloseButton.addEventListener("click", () => skillDialog.close());
+closeButton.addEventListener("click", () => closeModal(dialog));
+paperCloseButton.addEventListener("click", () => closeModal(paperDialog));
+awardCloseButton.addEventListener("click", () => closeModal(awardDialog));
+skillCloseButton.addEventListener("click", () => closeModal(skillDialog));
 
 dialog.addEventListener("click", (event) => {
   if (event.target === dialog) {
-    dialog.close();
+    closeModal(dialog);
   }
 });
 
 paperDialog.addEventListener("click", (event) => {
   if (event.target === paperDialog) {
-    paperDialog.close();
+    closeModal(paperDialog);
   }
 });
 
 awardDialog.addEventListener("click", (event) => {
   if (event.target === awardDialog) {
-    awardDialog.close();
+    closeModal(awardDialog);
   }
 });
 
 skillDialog.addEventListener("click", (event) => {
   if (event.target === skillDialog) {
-    skillDialog.close();
+    closeModal(skillDialog);
   }
 });
 
 skillDialog.addEventListener("close", () => {
   const video = skillDialog.querySelector(".skill-dialog-video");
   video.pause();
+});
+
+window.addEventListener("popstate", () => {
+  closeOpenModals(false);
 });
