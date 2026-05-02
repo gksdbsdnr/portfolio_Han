@@ -549,9 +549,10 @@ h3 {
 }
 
 .paper-date {
-  color: var(--text);
+  color: var(--accent-cool);
+  font-size: 0.9rem;
   font-style: italic;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .paper-title-line::after {
@@ -595,7 +596,7 @@ h3 {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--text);
+  background: var(--accent);
   content: "";
 }
 
@@ -697,6 +698,7 @@ h3 {
 
 .credential-layout h3 {
   margin-bottom: 14px;
+  color: var(--accent-strong);
   font-size: 1.24rem;
 }
 
@@ -710,7 +712,7 @@ h3 {
 }
 
 .resume-list li::marker {
-  color: var(--text);
+  color: var(--accent);
 }
 
 .rich-list li {
@@ -732,6 +734,12 @@ h3 {
 
 .rich-list span {
   margin-top: 4px;
+}
+
+.rich-list li strong + span {
+  color: var(--accent-cool);
+  font-size: 0.92rem;
+  font-weight: 800;
 }
 
 .award-trigger {
@@ -763,7 +771,7 @@ h3 {
 
 .education-list article {
   display: grid;
-  grid-template-columns: 150px 1fr auto;
+  grid-template-columns: 150px 1fr auto auto;
   gap: 16px;
   align-items: baseline;
   padding-bottom: 16px;
@@ -776,6 +784,7 @@ h3 {
 }
 
 .education-list strong {
+  color: var(--accent-strong);
   font-size: 1.05rem;
 }
 
@@ -785,8 +794,16 @@ h3 {
 }
 
 .education-list time {
-  color: var(--muted);
+  color: var(--accent-cool);
   font-size: 0.94rem;
+  font-weight: 800;
+}
+
+.education-list small {
+  color: var(--accent-warm);
+  font-size: 0.94rem;
+  font-weight: 900;
+  white-space: nowrap;
 }
 
 .muted {
