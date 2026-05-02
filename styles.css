@@ -549,10 +549,12 @@ h3 {
 }
 
 .paper-date {
+  display: inline-flex;
   color: var(--accent-cool);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-style: italic;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .paper-title-line::after {
@@ -771,8 +773,8 @@ h3 {
 
 .education-list article {
   display: grid;
-  grid-template-columns: 150px 1fr auto auto;
-  gap: 16px;
+  grid-template-columns: 150px minmax(260px, max-content) minmax(220px, 1fr) auto;
+  gap: 18px;
   align-items: baseline;
   padding-bottom: 16px;
   border-bottom: 1px solid var(--line);
@@ -797,12 +799,14 @@ h3 {
   color: var(--accent-cool);
   font-size: 0.94rem;
   font-weight: 800;
+  justify-self: end;
 }
 
 .education-list small {
   color: var(--accent-warm);
   font-size: 0.94rem;
   font-weight: 900;
+  justify-self: center;
   white-space: nowrap;
 }
 
@@ -1153,6 +1157,10 @@ h3 {
   .resume-section > .contact-grid {
     padding-left: 18px;
     border-left-width: 4px;
+  }
+
+  .paper-records {
+    padding-left: 18px;
   }
 
   .paper-title-line {
