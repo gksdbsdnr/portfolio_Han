@@ -20,10 +20,10 @@
       </a>
 
       <nav class="nav" aria-label="주요 섹션">
-        <a href="#career">경력</a>
         <a href="#projects">프로젝트</a>
         <a href="#research">연구</a>
         <a href="#skills">기술</a>
+        <a href="#awards">자격증/수상</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -39,9 +39,8 @@
           <h1 id="intro-title">한윤욱</h1>
           <p class="role">UAV Perception &amp; GNC Engineer</p>
           <p class="summary">
-            문제를 구조화하고, 사용자에게 필요한 기능을 명확한 화면과 안정적인 코드로
-            연결하는 개발자입니다. 빠른 실행력과 꼼꼼한 문서화를 바탕으로 팀이 신뢰할 수
-            있는 결과물을 만드는 데 집중합니다.
+            UAV 영상 기반 객체 인식 및 표적 방위각 추정 기술을 연구하며, 실제 환경
+            적용을 위한 시각 인지 AI를 개발하는 연구자입니다.
           </p>
 
           <div class="intro-actions" aria-label="주요 연락 링크">
@@ -95,50 +94,10 @@
         </div>
       </section>
 
-      <section class="section-shell" id="career" aria-labelledby="career-title">
-        <div class="section-heading">
-          <p class="eyebrow">Experience</p>
-          <h2 id="career-title">경력</h2>
-          <p>역할, 책임, 기여한 결과를 중심으로 정리한 경력 타임라인입니다.</p>
-        </div>
-
-        <div class="timeline">
-          <article class="timeline-item">
-            <time datetime="2025">2025.03 - 현재</time>
-            <div>
-              <h3>회사명 / 직무명</h3>
-              <p>
-                서비스 운영 효율을 높이기 위해 주요 화면과 데이터 흐름을 개선했습니다.
-              </p>
-              <ul class="compact-list">
-                <li>핵심 기능 개발 및 유지보수</li>
-                <li>사용자 피드백 기반 UI 개선</li>
-                <li>협업 문서화와 배포 프로세스 정리</li>
-              </ul>
-            </div>
-          </article>
-
-          <article class="timeline-item">
-            <time datetime="2024">2024.01 - 2025.02</time>
-            <div>
-              <h3>프로젝트 팀 / 역할명</h3>
-              <p>
-                팀 프로젝트에서 기획부터 구현, 테스트까지 담당하며 완성도를 높였습니다.
-              </p>
-              <ul class="compact-list">
-                <li>요구사항 분석과 화면 설계</li>
-                <li>반응형 웹 구현</li>
-                <li>이슈 관리와 코드 리뷰 참여</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-      </section>
-
       <section class="section-shell" id="projects" aria-labelledby="projects-title">
         <div class="section-heading">
           <p class="eyebrow">Projects</p>
-          <h2 id="projects-title">프로젝트 소개</h2>
+          <h2 id="projects-title">1. 프로젝트 소개</h2>
           <p>카드를 클릭하면 문제 정의, 구현 내용, 사용 기술, 성과를 자세히 볼 수 있습니다.</p>
         </div>
 
@@ -146,37 +105,53 @@
           <button
             class="project-card"
             type="button"
-            data-project="portfolio"
+            data-project="drone-coder"
             aria-haspopup="dialog"
           >
-            <span class="project-type">Web</span>
-            <h3>개인 포트폴리오 웹사이트</h3>
-            <p>정적 HTML, CSS, JavaScript 기반의 채용용 자기소개서 페이지입니다.</p>
-            <span class="project-meta">HTML · CSS · JavaScript</span>
+            <span class="project-type">충청북도 교육청</span>
+            <h3>드론코더300</h3>
+            <small class="project-date">2022.02 - 2024.02</small>
+            <p>드론과 코딩 교육을 연결한 무인항공기 기반 교육 및 실습 과제입니다.</p>
+            <span class="project-meta">Arduino · Drone · Education</span>
           </button>
 
           <button
             class="project-card"
             type="button"
-            data-project="dashboard"
+            data-project="ligdna-swarm"
             aria-haspopup="dialog"
           >
-            <span class="project-type">Dashboard</span>
-            <h3>데이터 분석 대시보드</h3>
-            <p>사용자가 지표를 빠르게 확인할 수 있는 카드형 분석 화면을 설계했습니다.</p>
-            <span class="project-meta">React · Chart · API</span>
+            <span class="project-type">LIGDNA</span>
+            <h3>군집 무인기 표적인식</h3>
+            <small class="project-date">기간 입력 예정</small>
+            <p>군집 무인기 환경에서 표적을 인식하고 임무 수행에 활용하는 연구 과제입니다.</p>
+            <span class="project-meta">UAV Swarm · Target Recognition · AI</span>
           </button>
 
           <button
             class="project-card"
             type="button"
-            data-project="automation"
+            data-project="etri-aam"
             aria-haspopup="dialog"
           >
-            <span class="project-type">Automation</span>
-            <h3>업무 자동화 도구</h3>
-            <p>반복 업무를 줄이기 위해 파일 처리와 리포트 생성을 자동화했습니다.</p>
-            <span class="project-meta">Python · Excel · Workflow</span>
+            <span class="project-type">ETRI</span>
+            <h3>GNSS-denied 환경에서 지능형 AAM 영상 항법 기술조사 및 구현</h3>
+            <small class="project-date">2024.06 - 2024.12</small>
+            <p>GNSS 사용이 제한된 환경에서 영상 기반 AAM 항법 기술을 조사하고 구현했습니다.</p>
+            <span class="project-meta">PX4 · Python · Unreal Engine</span>
+          </button>
+
+          <button
+            class="project-card"
+            type="button"
+            data-project="defense-sw"
+            aria-haspopup="dialog"
+          >
+            <span class="project-type">산자부</span>
+            <h3>항공방산SW인력양성사업</h3>
+            <small class="project-date">기간 입력 예정</small>
+            <p>항공방산 소프트웨어 분야 실무 역량과 연구 역량을 강화한 인력양성 과제입니다.</p>
+            <span class="project-meta">Aerospace · Defense SW · Training</span>
           </button>
         </div>
       </section>
@@ -184,7 +159,7 @@
       <section class="section-shell resume-section" id="research" aria-labelledby="research-title">
         <div class="section-heading resume-heading">
           <p class="eyebrow">Research</p>
-          <h2 id="research-title">3. 논문 및 연구</h2>
+          <h2 id="research-title">2. 논문 및 연구</h2>
         </div>
 
         <div class="paper-records" aria-label="논문 및 연구 목록">
@@ -249,57 +224,57 @@
       <section class="section-shell resume-section" id="skills" aria-labelledby="skills-title">
         <div class="section-heading resume-heading">
           <p class="eyebrow">Tech Stack</p>
-          <h2 id="skills-title">4. 기술 스택</h2>
+          <h2 id="skills-title">3. 기술 스택</h2>
         </div>
 
         <div class="skill-levels" aria-label="기술 스택 숙련도">
-          <div class="skill-row" style="--level: 70%">
+          <button class="skill-row" type="button" data-skill="matlab" style="--level: 70%" aria-haspopup="dialog">
             <div>
               <strong>MATLAB / Simulink</strong>
               <span>비행 동역학 및 제어 모델링</span>
             </div>
             <meter min="0" max="5" value="3.5">3.5 / 5</meter>
             <b>3.5</b>
-          </div>
-          <div class="skill-row" style="--level: 40%">
+          </button>
+          <button class="skill-row" type="button" data-skill="python" style="--level: 40%" aria-haspopup="dialog">
             <div>
               <strong>Python</strong>
               <span>데이터 처리 및 실험 자동화</span>
             </div>
             <meter min="0" max="5" value="2">2 / 5</meter>
             <b>2</b>
-          </div>
-          <div class="skill-row" style="--level: 70%">
+          </button>
+          <button class="skill-row" type="button" data-skill="ardupilot" style="--level: 70%" aria-haspopup="dialog">
             <div>
               <strong>Ardupilot</strong>
               <span>무인항공기 제어 시스템 운용</span>
             </div>
             <meter min="0" max="5" value="3.5">3.5 / 5</meter>
             <b>3.5</b>
-          </div>
-          <div class="skill-row" style="--level: 70%">
+          </button>
+          <button class="skill-row" type="button" data-skill="px4" style="--level: 70%" aria-haspopup="dialog">
             <div>
               <strong>PX4</strong>
               <span>비행 제어 및 시뮬레이션 연동</span>
             </div>
             <meter min="0" max="5" value="3.5">3.5 / 5</meter>
             <b>3.5</b>
-          </div>
-          <div class="skill-row" style="--level: 70%">
+          </button>
+          <button class="skill-row" type="button" data-skill="data-analysis" style="--level: 70%" aria-haspopup="dialog">
             <div>
               <strong>데이터 분석</strong>
               <span>실험 데이터 비교 및 성능 분석</span>
             </div>
             <meter min="0" max="5" value="3.5">3.5 / 5</meter>
             <b>3.5</b>
-          </div>
+          </button>
         </div>
       </section>
 
       <section class="section-shell resume-section" id="awards" aria-labelledby="awards-title">
         <div class="section-heading resume-heading">
           <p class="eyebrow">Certificates & Awards</p>
-          <h2 id="awards-title">5. 자격증 및 수상 내역</h2>
+          <h2 id="awards-title">4. 자격증 및 수상 내역</h2>
         </div>
 
         <div class="credential-layout">
@@ -309,6 +284,7 @@
               <li>초경량비행장치 조종 자격증 1종 (2019)</li>
               <li>1종 대형 운전면허</li>
               <li>버스운전자격</li>
+              <li>TOEIC 점수 입력 예정</li>
             </ul>
           </section>
 
@@ -350,7 +326,7 @@
       <section class="section-shell resume-section" id="education" aria-labelledby="education-title">
         <div class="section-heading resume-heading">
           <p class="eyebrow">Education</p>
-          <h2 id="education-title">6. 학력</h2>
+          <h2 id="education-title">5. 학력</h2>
         </div>
 
         <div class="education-list">
@@ -370,7 +346,7 @@
       <section class="section-shell resume-section contact-section" id="contact" aria-labelledby="contact-title">
         <div class="section-heading resume-heading">
           <p class="eyebrow">Contact</p>
-          <h2 id="contact-title">Contact</h2>
+          <h2 id="contact-title">6. Contact</h2>
         </div>
 
         <address class="contact-grid">
@@ -465,6 +441,33 @@
         <h2 id="award-dialog-title"></h2>
         <p class="dialog-summary award-dialog-summary"></p>
         <div class="award-gallery"></div>
+      </div>
+    </dialog>
+
+    <dialog class="skill-dialog" aria-labelledby="skill-dialog-title">
+      <div class="dialog-surface">
+        <button class="icon-button skill-dialog-close" type="button" aria-label="기술 상세 닫기">
+          ×
+        </button>
+        <p class="eyebrow skill-dialog-category">Tech Stack</p>
+        <h2 id="skill-dialog-title"></h2>
+        <p class="dialog-summary skill-dialog-summary"></p>
+
+        <div class="skill-detail-grid">
+          <section>
+            <h3>활용 경험</h3>
+            <ul class="skill-dialog-experience dialog-features"></ul>
+          </section>
+          <section>
+            <h3>적용 분야</h3>
+            <div class="chips skill-dialog-tags"></div>
+          </section>
+        </div>
+
+        <figure class="skill-video-wrap" hidden>
+          <video class="skill-dialog-video" controls playsinline preload="metadata"></video>
+          <figcaption class="skill-video-caption"></figcaption>
+        </figure>
       </div>
     </dialog>
 

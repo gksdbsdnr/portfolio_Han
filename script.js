@@ -7,55 +7,69 @@ const paperDialog = document.querySelector(".paper-dialog");
 const paperCloseButton = document.querySelector(".paper-dialog-close");
 const awardDialog = document.querySelector(".award-dialog");
 const awardCloseButton = document.querySelector(".award-dialog-close");
+const skillDialog = document.querySelector(".skill-dialog");
+const skillCloseButton = document.querySelector(".skill-dialog-close");
 
 const projects = {
-  portfolio: {
-    category: "Web",
-    title: "개인 포트폴리오 웹사이트",
+  "drone-coder": {
+    category: "충청북도 교육청",
+    title: "드론코더300",
     summary:
-      "채용 담당자가 경력, 프로젝트, 연구, 기술 스택을 빠르게 훑어볼 수 있도록 설계한 정적 웹 자기소개서입니다.",
+      "드론과 코딩 교육을 연결해 학생들이 무인항공기 구조와 제어 개념을 실습할 수 있도록 구성한 교육 과제입니다.",
     problem:
-      "문서형 자기소개서는 강점과 결과가 한눈에 들어오지 않아, 지원자의 작업물을 직접 확인하기 어렵다는 문제가 있었습니다.",
+      "드론 교육은 하드웨어 조립, 센서 이해, 코딩 제어가 함께 필요해 초심자가 단계적으로 접근하기 어렵습니다.",
     features: [
-      "다크 모드와 화이트 모드 전환",
-      "반응형 레이아웃과 접근성 고려",
-      "프로젝트 상세 내용을 dialog 패널로 제공",
+      "아두이노 기반 드론 실습 구성",
+      "드론 동작 원리와 코딩 교육 흐름 정리",
+      "교육 현장에서 활용 가능한 실습 중심 콘텐츠 구성",
     ],
-    stack: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
-    impact:
-      "별도 서버 없이 배포할 수 있고, 지원 직무에 맞춰 내용을 빠르게 수정할 수 있는 포트폴리오 기반을 만들었습니다.",
+    stack: ["Arduino", "Drone", "Education", "UAV"],
+    impact: "무인항공기와 코딩을 함께 경험할 수 있는 교육형 프로젝트 수행 경험을 쌓았습니다.",
   },
-  dashboard: {
-    category: "Dashboard",
-    title: "데이터 분석 대시보드",
+  "ligdna-swarm": {
+    category: "LIGDNA",
+    title: "군집 무인기 표적인식",
     summary:
-      "운영 지표를 빠르게 파악할 수 있도록 핵심 수치를 카드, 차트, 필터로 정리한 화면입니다.",
+      "군집 무인기 환경에서 표적 인식 기술을 연구하고, 임무 수행에 필요한 인식 흐름을 검토한 과제입니다.",
     problem:
-      "분산된 데이터를 수동으로 확인해야 해서 의사결정에 시간이 오래 걸리고, 반복 보고 작업이 많았습니다.",
+      "군집 무인기는 여러 기체가 동시에 운용되기 때문에 표적을 안정적으로 인식하고 정보를 활용하는 구조가 중요합니다.",
     features: [
-      "핵심 KPI 카드와 기간 필터 구성",
-      "차트 기반 추세 확인 화면 구현",
-      "API 응답 상태에 따른 로딩, 빈 화면, 오류 상태 처리",
+      "군집 무인기 기반 표적인식 시나리오 검토",
+      "객체 인식 기술의 무인기 임무 적용 가능성 분석",
+      "인식 결과를 임무 수행 흐름과 연결하는 구조 정리",
     ],
-    stack: ["React", "TypeScript", "REST API", "Chart"],
-    impact:
-      "주요 지표 확인 시간을 줄이고, 팀원이 동일한 기준으로 데이터를 해석할 수 있도록 화면을 표준화했습니다.",
+    stack: ["UAV Swarm", "Target Recognition", "Computer Vision", "AI"],
+    impact: "방산 분야 무인 시스템에서 객체 인식 기술이 활용되는 방향을 이해하고 연구 경험을 확장했습니다.",
   },
-  automation: {
-    category: "Automation",
-    title: "업무 자동화 도구",
+  "etri-aam": {
+    category: "ETRI",
+    title: "GNSS-denied 환경에서 지능형 AAM 영상 항법 기술조사 및 구현",
     summary:
-      "반복되는 파일 정리, 데이터 변환, 리포트 생성을 자동화해 업무 시간을 줄인 도구입니다.",
+      "GNSS 사용이 제한된 환경에서 AAM이 영상 기반으로 항법 정보를 확보할 수 있는 기술을 조사하고 구현한 과제입니다.",
     problem:
-      "매주 동일한 형식의 자료를 취합하고 정리하는 과정에서 실수가 발생하고 시간이 많이 소요되었습니다.",
+      "도심 환경에서는 GNSS 신호가 불안정하거나 제한될 수 있어 영상 기반 항법과 가상 환경 검증이 필요합니다.",
     features: [
-      "입력 파일 검증과 예외 처리",
-      "정형 리포트 자동 생성",
-      "사용자별 설정값을 반영한 출력 파일 생성",
+      "GNSS-denied 환경의 AAM 영상 항법 기술 조사",
+      "가상 환경 구현 및 영상 기반 항법 흐름 검토",
+      "PX4, Python, Unreal Engine 기반 구현 경험",
     ],
-    stack: ["Python", "Pandas", "Excel", "Automation"],
-    impact:
-      "반복 작업을 자동화해 처리 시간을 단축하고, 수작업 오류 가능성을 낮췄습니다.",
+    stack: ["PX4", "Python", "Unreal Engine", "AAM"],
+    impact: "AAM 영상 항법 기술의 구현 흐름과 가상 환경 기반 검증 경험을 확보했습니다.",
+  },
+  "defense-sw": {
+    category: "산자부",
+    title: "항공방산SW인력양성사업",
+    summary:
+      "항공방산 소프트웨어 분야에서 요구되는 개발, 시뮬레이션, 시스템 이해 역량을 강화한 인력양성 과제입니다.",
+    problem:
+      "항공방산 분야는 비행 제어, 인식, 시뮬레이션, 소프트웨어 안전성을 함께 이해하는 융합형 역량이 필요합니다.",
+    features: [
+      "항공방산 소프트웨어 관련 교육 및 실습 참여",
+      "무인항공기와 방산 SW 적용 분야 이해",
+      "연구 과제와 발표 경험을 통한 실무형 역량 강화",
+    ],
+    stack: ["Aerospace", "Defense SW", "Simulation", "UAV"],
+    impact: "항공방산 SW 분야로 확장 가능한 연구 경험과 실무형 문제 해결 역량을 정리했습니다.",
   },
 };
 
@@ -184,6 +198,74 @@ const awards = {
   },
 };
 
+const skills = {
+  matlab: {
+    title: "MATLAB / Simulink",
+    summary:
+      "비행 동역학 해석, 제어기 설계, 시뮬레이션 검증에 활용한 핵심 도구입니다.",
+    experience: [
+      "비행 동역학 및 제어 과목에서 항공기 모델링과 제어기 설계 수행",
+      "Simulink 기반 블록 다이어그램으로 시스템 응답 확인",
+      "실험 결과를 그래프와 수치로 정리해 성능 비교",
+    ],
+    tags: ["Flight Dynamics", "Control", "Simulation", "Modeling"],
+    video: "",
+    videoCaption: "MATLAB / Simulink 시뮬레이션 영상",
+  },
+  python: {
+    title: "Python",
+    summary:
+      "실험 데이터 정리, 결과 분석, 자동화 스크립트 작성에 활용합니다.",
+    experience: [
+      "객체 탐지 실험 결과 정리와 데이터 처리",
+      "반복 실험 파일 관리 및 분석 자동화",
+      "시각화와 리포트 작성 보조 도구로 활용",
+    ],
+    tags: ["Data Processing", "Automation", "Analysis"],
+    video: "",
+    videoCaption: "Python 기반 실험 자동화 영상",
+  },
+  ardupilot: {
+    title: "Ardupilot",
+    summary:
+      "무인항공기 제어 시스템과 오픈소스 비행 제어 구조를 이해하고 운용하는 데 활용했습니다.",
+    experience: [
+      "드론 및 무인 시스템 프로젝트에서 비행 제어 구조 학습",
+      "미션 수행 흐름과 파라미터 기반 제어 개념 정리",
+      "PX4와 함께 UAV 제어 시스템 비교 경험",
+    ],
+    tags: ["UAV", "Autopilot", "Mission", "Flight Control"],
+    video: "",
+    videoCaption: "Ardupilot 운용 또는 비행 테스트 영상",
+  },
+  px4: {
+    title: "PX4",
+    summary:
+      "UAV/AAM 영상 항법 구현과 가상 환경 연동 과정에서 활용한 비행 제어 플랫폼입니다.",
+    experience: [
+      "GNSS-denied 환경에서 영상 항법 기술 조사 및 구현 경험",
+      "가상 환경과 비행 제어 시스템 연동 흐름 이해",
+      "시뮬레이션 기반 비행 검증 과정 수행",
+    ],
+    tags: ["PX4", "AAM", "Simulation", "Navigation"],
+    video: "",
+    videoCaption: "PX4 시뮬레이션 또는 비행 연동 영상",
+  },
+  "data-analysis": {
+    title: "데이터 분석",
+    summary:
+      "가상 환경 데이터셋, 객체 인식 결과, 모델 성능을 비교 분석하는 데 활용했습니다.",
+    experience: [
+      "가상 환경 데이터셋 구성별 객체 인식 성능 비교",
+      "YOLOv11 및 TensorRT 최적화 결과 분석",
+      "실험 결과를 논문과 발표 자료 형태로 정리",
+    ],
+    tags: ["Dataset", "Object Detection", "TensorRT", "Performance"],
+    video: "",
+    videoCaption: "객체 탐지 또는 성능 분석 결과 영상",
+  },
+};
+
 function applyTheme(theme) {
   root.dataset.theme = theme;
   themeIcon.textContent = theme === "dark" ? "☀" : "☾";
@@ -298,6 +380,50 @@ function openAward(awardId) {
   awardDialog.showModal();
 }
 
+function openSkill(skillId) {
+  const skill = skills[skillId];
+  if (!skill) return;
+
+  setDialogText(skillDialog, "#skill-dialog-title", skill.title);
+  setDialogText(skillDialog, ".skill-dialog-summary", skill.summary);
+
+  const experienceList = skillDialog.querySelector(".skill-dialog-experience");
+  experienceList.replaceChildren(
+    ...skill.experience.map((itemText) => {
+      const item = document.createElement("li");
+      item.textContent = itemText;
+      return item;
+    }),
+  );
+
+  const tagList = skillDialog.querySelector(".skill-dialog-tags");
+  tagList.replaceChildren(
+    ...skill.tags.map((tag) => {
+      const item = document.createElement("span");
+      item.textContent = tag;
+      return item;
+    }),
+  );
+
+  const videoWrap = skillDialog.querySelector(".skill-video-wrap");
+  const video = skillDialog.querySelector(".skill-dialog-video");
+  const caption = skillDialog.querySelector(".skill-video-caption");
+
+  video.pause();
+  video.removeAttribute("src");
+  video.load();
+
+  if (skill.video) {
+    video.src = skill.video;
+    caption.textContent = skill.videoCaption;
+    videoWrap.hidden = false;
+  } else {
+    videoWrap.hidden = true;
+  }
+
+  skillDialog.showModal();
+}
+
 document.querySelectorAll(".project-card").forEach((card) => {
   card.addEventListener("click", () => openProject(card.dataset.project));
 });
@@ -310,9 +436,14 @@ document.querySelectorAll(".award-trigger").forEach((item) => {
   item.addEventListener("click", () => openAward(item.dataset.award));
 });
 
+document.querySelectorAll(".skill-row").forEach((item) => {
+  item.addEventListener("click", () => openSkill(item.dataset.skill));
+});
+
 closeButton.addEventListener("click", () => dialog.close());
 paperCloseButton.addEventListener("click", () => paperDialog.close());
 awardCloseButton.addEventListener("click", () => awardDialog.close());
+skillCloseButton.addEventListener("click", () => skillDialog.close());
 
 dialog.addEventListener("click", (event) => {
   if (event.target === dialog) {
@@ -330,4 +461,15 @@ awardDialog.addEventListener("click", (event) => {
   if (event.target === awardDialog) {
     awardDialog.close();
   }
+});
+
+skillDialog.addEventListener("click", (event) => {
+  if (event.target === skillDialog) {
+    skillDialog.close();
+  }
+});
+
+skillDialog.addEventListener("close", () => {
+  const video = skillDialog.querySelector(".skill-dialog-video");
+  video.pause();
 });

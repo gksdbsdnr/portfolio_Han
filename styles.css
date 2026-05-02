@@ -423,7 +423,7 @@ h3 {
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 14px;
 }
 
@@ -464,6 +464,15 @@ h3 {
 
 .project-card h3 {
   margin-top: 22px;
+}
+
+.project-date {
+  display: block;
+  margin-top: 8px;
+  color: var(--accent-cool);
+  font-size: 0.82rem;
+  font-weight: 850;
+  line-height: 1.35;
 }
 
 .project-card p {
@@ -608,8 +617,28 @@ h3 {
   grid-template-columns: minmax(210px, 1fr) minmax(160px, 320px) 44px;
   gap: 18px;
   align-items: center;
+  width: 100%;
   padding: 18px 0;
+  border: 0;
   border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.skill-row:hover,
+.skill-row:focus-visible {
+  transform: translateX(4px);
+}
+
+.skill-row:hover strong,
+.skill-row:focus-visible strong {
+  color: var(--accent-warm);
 }
 
 .skill-row:first-child {
@@ -859,7 +888,8 @@ h3 {
 
 .project-dialog,
 .paper-dialog,
-.award-dialog {
+.award-dialog,
+.skill-dialog {
   width: min(920px, calc(100% - 32px));
   max-height: calc(100vh - 32px);
   padding: 0;
@@ -872,7 +902,8 @@ h3 {
 
 .project-dialog::backdrop,
 .paper-dialog::backdrop,
-.award-dialog::backdrop {
+.award-dialog::backdrop,
+.skill-dialog::backdrop {
   background: rgba(0, 0, 0, 0.58);
   backdrop-filter: blur(5px);
 }
@@ -888,7 +919,8 @@ h3 {
 
 .dialog-close,
 .paper-dialog-close,
-.award-dialog-close {
+.award-dialog-close,
+.skill-dialog-close {
   position: absolute;
   top: 18px;
   right: 18px;
@@ -974,6 +1006,48 @@ h3 {
   font-weight: 750;
 }
 
+.skill-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.skill-detail-grid section {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-strong);
+}
+
+.skill-detail-grid h3 {
+  margin-bottom: 10px;
+}
+
+.skill-video-wrap {
+  display: grid;
+  gap: 8px;
+  margin: 22px 0 0;
+}
+
+.skill-video-wrap[hidden] {
+  display: none;
+}
+
+.skill-dialog-video {
+  width: 100%;
+  max-height: 62vh;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #000;
+}
+
+.skill-video-caption {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 750;
+}
+
 @media (max-width: 900px) {
   .topbar {
     align-items: flex-start;
@@ -996,7 +1070,8 @@ h3 {
   .project-grid,
   .skill-groups,
   .contact-grid,
-  .detail-grid {
+  .detail-grid,
+  .skill-detail-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1048,7 +1123,8 @@ h3 {
   .project-grid,
   .skill-groups,
   .contact-grid,
-  .detail-grid {
+  .detail-grid,
+  .skill-detail-grid {
     grid-template-columns: 1fr;
   }
 
