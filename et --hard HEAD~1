@@ -1,0 +1,133 @@
+[33mcommit 465fca2e4ac93fdd74ff4b1f50c15e410421702d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: gksdbsdnr <han00062990@gmail.com>
+Date:   Wed May 6 14:36:06 2026 +0900
+
+    fix
+
+ ...35\270\354\213\235 \354\230\201\354\203\201.mp4" | Bin [31m0[m -> [32m411448105[m bytes
+ .../\353\257\270\353\224\224\354\226\2641.mp4"      | Bin [31m0[m -> [32m9601519[m bytes
+ .../\353\257\270\353\224\224\354\226\2642.mp4"      | Bin [31m0[m -> [32m50578921[m bytes
+ .../\353\257\270\353\224\224\354\226\2643.mp4"      | Bin [31m0[m -> [32m931939[m bytes
+ .../\354\227\254\354\235\230\353\217\204.mp4"       | Bin [31m0[m -> [32m245848406[m bytes
+ ...217\231\353\235\274\353\262\250\353\247\201.mp4" | Bin [31m0[m -> [32m41218558[m bytes
+ script.js                                           |   8 [32m++++[m[31m----[m
+ 7 files changed, 4 insertions(+), 4 deletions(-)
+
+[33mcommit 607b58a4e0b6e2ed8c956724056bfa78b74571ac[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: gksdbsdnr <han00062990@gmail.com>
+Date:   Sat May 2 22:02:52 2026 +0900
+
+    fix
+
+ styles.css | 17 [32m+++++++++++++++++[m
+ 1 file changed, 17 insertions(+)
+
+[33mcommit 0738692b77e07ff163436a39feedb15edb219c46[m
+Author: gksdbsdnr <han00062990@gmail.com>
+Date:   Sat May 2 21:14:07 2026 +0900
+
+    fix
+
+ index.html | 44 [32m+++++++++++++++++[m[31m-----------------[m
+ script.js  | 81 [32m+++++++++++++++++++++++++++++[m[31m---------------------------------[m
+ styles.css | 14 [32m++++++++[m[31m---[m
+ 3 files changed, 71 insertions(+), 68 deletions(-)
+
+[33mcommit 661986d0972bbf9e9e71196e4b1fa89e5cd475b5[m
+Author: gksdbsdnr <han00062990@gmail.com>
+Date:   Sat May 2 20:43:27 2026 +0900
+
+    fix
+
+ index.html |  4 [32m+++[m[31m-[m
+ script.js  | 59 [32m+++++++++++++++++++++++++++++++++++++++++++++++[m[31m------------[m
+ styles.css | 29 [32m+++++++++++++++++++++++[m[31m------[m
+ 3 files changed, 73 insertions(+), 19 deletions(-)
+
+[33mcommit b1ac218cdc86c8ad97adce572e119093bcbe4b99[m
+Author: gksdbsdnr <han00062990@gmail.com>
+Date:   Sat May 2 17:38:28 2026 +0900
+
+    fix
+
+ index.html | 10 [32m+++++[m[31m-----[m
+ styles.css | 21 [32m+++++++[m[31m--------------[m
+ 2 files changed, 12 insertions(+), 19 deletions(-)
+
+[33mcommit 062d411e0f3081836f8a3aad61ec5dba2586282a[m
+Merge: e58fcbb abcbecf
+Author: gksdbsdnr <han00062990@gmail.com>
+Date:   Sat May 2 17:33:35 2026 +0900
+
+    fix
+
+[33mcommit e58fcbb82eb431b84ec1a723d829a9c2339438d7[m
+Author: gksdbsdnr <han00062990@gmail.com>
+Date:   Sat May 2 17:30:57 2026 +0900
+
+    fix
+
+ index.html | 153 [32m+++++++++++++++++++++++[m[31m----------------------[m
+ script.js  | 208 [32m+++++++++++++++++++++++++++++++++++++++++++++++++++[m[31m----------[m
+ styles.css |  88 [32m++++++++++++++++++++++++[m[31m--[m
+ 3 files changed, 335 insertions(+), 114 deletions(-)
+
+[33mcommit abcbecfdad2b69025f1b9e52445332584be5cd68[m
+Author: gksdbsdnr <131749508+gksdbsdnr@users.noreply.github.com>
+Date:   Fri May 1 19:25:51 2026 +0900
+
+    Update README.md
+
+ README.md | 2 [32m+[m[31m-[m
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+[33mcommit 4b56b1dc4e34183664f4ef1413b910db4209bf61[m
+Author: gksdbsdnr <131749508+gksdbsdnr@users.noreply.github.com>
+Date:   Fri May 1 19:21:37 2026 +0900
+
+    Delete .github/workflows/static.yml
+
+ .github/workflows/static.yml | 43 [31m-------------------------------------------[m
+ 1 file changed, 43 deletions(-)
+
+[33mcommit c78fbae65cd6d58416e3824c57b9967d76e105e7[m
+Author: gksdbsdnr <131749508+gksdbsdnr@users.noreply.github.com>
+Date:   Fri May 1 17:30:41 2026 +0900
+
+    Create static.yml
+
+ .github/workflows/static.yml | 43 [32m+++++++++++++++++++++++++++++++++++++++++++[m
+ 1 file changed, 43 insertions(+)
+
+[33mcommit f9e5588b866b1b2449303b8cc6240e95886ae9a1[m
+Author: gksdbsdnr <han00062990@gmail.com>
+Date:   Fri May 1 17:28:58 2026 +0900
+
+    fix
+
+ assets/awards/aiaa-presentation-photo.jpg         |  Bin [31m0[m -> [32m2485031[m bytes
+ assets/awards/aiaa-presentation-slide.png         |  Bin [31m0[m -> [32m335687[m bytes
+ assets/awards/excellent-paper-award.jpg           |  Bin [31m0[m -> [32m2743648[m bytes
+ assets/awards/excellent-paper-presentation.jpg    |  Bin [31m0[m -> [32m3322873[m bytes
+ assets/awards/industry-project-challenge.jpg      |  Bin [31m0[m -> [32m1093459[m bytes
+ assets/awards/ip-mobility-award.jpg               |  Bin [31m0[m -> [32m245895[m bytes
+ assets/papers/auto-labeling-landing-pad.pdf       |  Bin [31m0[m -> [32m2121519[m bytes
+ assets/papers/distance-estimation-landing-pad.pdf |  Bin [31m0[m -> [32m602720[m bytes
+ assets/papers/tensorrt-yolov11-jetson.pdf         |  Bin [31m0[m -> [32m621019[m bytes
+ assets/papers/virtual-dataset-landing-pad.pdf     |  Bin [31m0[m -> [32m233173[m bytes
+ assets/profile-photo.png                          |  Bin [31m0[m -> [32m22794[m bytes
+ assets/profile-visual.svg                         |   21 [32m+[m
+ assets/research-detection.png                     |  Bin [31m0[m -> [32m218409[m bytes
+ index.html                                        |  473 [32m+++++++++[m
+ script.js                                         |  333 [32m+++++++[m
+ styles.css                                        | 1097 [32m+++++++++++++++++++++[m
+ 16 files changed, 1924 insertions(+)
+
+[33mcommit eb00d9010a8074059402f776a72378e7861aa50c[m
+Author: gksdbsdnr <han00062990@gmail.com>
+Date:   Fri May 1 17:24:19 2026 +0900
+
+    first commit
+
+ README.md | 20 [32m++++++++++++++++++++[m
+ 1 file changed, 20 insertions(+)
