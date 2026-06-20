@@ -15,7 +15,7 @@
 
     <header class="topbar">
       <a class="brand" href="#intro" aria-label="홈으로 이동">
-        <span class="brand-mark">HY</span>
+        <span class="brand-mark" aria-hidden="true">✈️</span>
         <span class="brand-text">Portfolio</span>
       </a>
 
@@ -35,7 +35,6 @@
     <main id="main">
       <section class="intro section-shell" id="intro" aria-labelledby="intro-title">
         <div class="intro-copy">
-          <p class="eyebrow">Job Application Portfolio</p>
           <h1 id="intro-title">한윤욱</h1>
           <p class="role">UAV Perception &amp; GNC Engineer</p>
           <p class="summary">
@@ -98,62 +97,68 @@
         <div class="section-heading">
           <p class="eyebrow">Projects</p>
           <h2 id="projects-title">1. 프로젝트 소개</h2>
-          <p>카드를 클릭하면 문제 정의, 구현 내용, 사용 기술, 성과를 자세히 볼 수 있습니다.</p>
+          <p>카드를 클릭하면 해당 프로젝트의 내용을 자세히 볼 수 있습니다.</p>
         </div>
 
         <div class="project-grid">
-          <button
-            class="project-card"
-            type="button"
-            data-project="drone-coder"
-            aria-haspopup="dialog"
-          >
-            <span class="project-type">충청북도 교육청</span>
-            <h3>드론코더300</h3>
-            <small class="project-date">2022.02 - 2024.02</small>
-            <p>드론과 코딩 교육을 연결한 무인항공기 기반 교육 및 실습 과제입니다.</p>
-            <span class="project-meta">Arduino · Drone · Education</span>
-          </button>
 
-          <button
-            class="project-card"
-            type="button"
-            data-project="ligdna-swarm"
-            aria-haspopup="dialog"
-          >
-            <span class="project-type">LIGDNA</span>
-            <h3>군집 무인기 표적인식</h3>
-            <small class="project-date">기간 입력 예정</small>
-            <p>군집 무인기 환경에서 표적을 인식하고 임무 수행에 활용하는 연구 과제입니다.</p>
-            <span class="project-meta">UAV Swarm · Target Recognition · AI</span>
-          </button>
+        <!-- 1. ETRI -->
+        <button
+          class="project-card"
+          type="button"
+          data-project="etri-aam"
+          aria-haspopup="dialog"
+        >
+          <span class="project-type">ETRI</span>
+          <h3>GNSS-denied 환경에서 지능형 AAM 영상 항법 기술조사 및 구현</h3>
+          <small class="project-date">2024.06 - 2024.12</small>
+          <p>GNSS 사용이 제한된 환경에서 영상 기반 AAM 항법 기술을 조사하고 구현했습니다.</p>
+          <span class="project-meta">PX4 · Python · Unreal Engine</span>
+        </button>
 
-          <button
-            class="project-card"
-            type="button"
-            data-project="etri-aam"
-            aria-haspopup="dialog"
-          >
-            <span class="project-type">ETRI</span>
-            <h3>GNSS-denied 환경에서 지능형 AAM 영상 항법 기술조사 및 구현</h3>
-            <small class="project-date">2024.06 - 2024.12</small>
-            <p>GNSS 사용이 제한된 환경에서 영상 기반 AAM 항법 기술을 조사하고 구현했습니다.</p>
-            <span class="project-meta">PX4 · Python · Unreal Engine</span>
-          </button>
+        <!-- 2. LIGDNA -->
+        <button
+          class="project-card"
+          type="button"
+          data-project="ligdna-swarm"
+          aria-haspopup="dialog"
+        >
+          <span class="project-type">LIGDNA</span>
+          <h3>군집 무인기 표적인식</h3>
+          <small class="project-date">기간 입력 예정</small>
+          <p>군집 무인기 환경에서 표적을 인식하고 임무 수행에 활용하는 연구 과제입니다.</p>
+          <span class="project-meta">UAV Swarm · Target Recognition · AI</span>
+        </button>
 
-          <button
-            class="project-card"
-            type="button"
-            data-project="defense-sw"
-            aria-haspopup="dialog"
-          >
-            <span class="project-type">산자부</span>
-            <h3>항공방산SW인력양성사업</h3>
-            <small class="project-date">기간 입력 예정</small>
-            <p>항공방산 소프트웨어 분야 실무 역량과 연구 역량을 강화한 인력양성 과제입니다.</p>
-            <span class="project-meta">Aerospace · Defense SW · Training</span>
-          </button>
-        </div>
+        <!-- 3. 항공방산SW -->
+        <button
+          class="project-card"
+          type="button"
+          data-project="defense-sw"
+          aria-haspopup="dialog"
+        >
+          <span class="project-type">산자부</span>
+          <h3>항공방산SW인력양성사업</h3>
+          <small class="project-date">기간 입력 예정</small>
+          <p>항공방산 소프트웨어 분야 실무 역량과 연구 역량을 강화한 인력양성 과제입니다.</p>
+          <span class="project-meta">Aerospace · Defense SW · Training</span>
+        </button>
+
+        <!-- 4. 드론코더300 -->
+        <button
+          class="project-card"
+          type="button"
+          data-project="drone-coder"
+          aria-haspopup="dialog"
+        >
+          <span class="project-type">충청북도 교육청</span>
+          <h3>드론코더300</h3>
+          <small class="project-date">2022.02 - 2024.02</small>
+          <p>드론과 코딩 교육을 연결한 무인항공기 기반 교육 및 실습 과제입니다.</p>
+          <span class="project-meta">Arduino · Drone · Education</span>
+        </button>
+
+      </div>
       </section>
 
       <section class="section-shell resume-section" id="research" aria-labelledby="research-title">
@@ -281,44 +286,53 @@
           <section aria-labelledby="certificate-title">
             <h3 id="certificate-title">자격증</h3>
             <ul class="resume-list">
-              <li>초경량비행장치 조종 자격증 1종 (2019)</li>
-              <li>1종 대형 운전면허</li>
-              <li>버스운전자격</li>
+              <li>초경량비행장치 조종자 증명 (무인멀티콥터 1종)</li>
+              <li>1종 대형 운전면허 / 버스운전자격</li>
               <li>TOEIC 점수 입력 예정</li>
             </ul>
           </section>
 
-          <section aria-labelledby="award-title">
-            <h3 id="award-title">수상 내역</h3>
-            <ul class="resume-list rich-list">
-              <li class="award-clickable">
-                <button type="button" class="award-trigger" data-award="ip-mobility">
-                  <strong>2024년 IP & 모빌리티 융합 디자인 경진대회 최우수상</strong>
-                  <span>청주대학교 신기술융합디자인 혁신인재양성사업단장</span>
-                  <span>협소 골목길을 빠르게 돌파해 다양한 장비를 전달하고 전개를 돕는 무인 로봇</span>
-                </button>
-              </li>
-              <li>
-                <strong>CJU 연구 연계 교육 우수사례 (2025년)</strong>
-                <span>자율 군집 드론 기술 시뮬레이션</span>
-              </li>
-              <li>대전제어로봇시스템학회 학부생 논문경진대회 참가 경험 (2024년)</li>
-              <li class="award-clickable">
-                <button type="button" class="award-trigger" data-award="industry-challenge">
-                  <strong>산학프로젝트챌린지 본선 참가 경험</strong>
-                </button>
-              </li>
-              <li class="award-clickable">
-                <button type="button" class="award-trigger" data-award="excellent-paper">
-                  <strong>항공우주시스템공학회 추계학술대회 우수발표 논문 수상 (발표자) (2025년)</strong>
-                </button>
-              </li>
-              <li class="award-clickable">
-                <button type="button" class="award-trigger" data-award="aiaa">
-                  <strong>AIAA Scitech 구두 발표 (2026)</strong>
-                </button>
-              </li>
-            </ul>
+          <section class="award-groups" aria-label="수상 내역 및 학술 활동">
+            <div aria-labelledby="award-title">
+              <h3 id="award-title">수상 내역</h3>
+              <ul class="resume-list rich-list">
+                <li class="award-clickable">
+                  <button type="button" class="award-trigger" data-award="ip-mobility">
+                    <strong>2024년 IP & 모빌리티 융합 디자인 경진대회 최우수상</strong>
+                    <span>청주대학교 신기술융합디자인 혁신인재양성사업단장</span>
+                  </button>
+                </li>
+                <li class="award-clickable">
+                  <button type="button" class="award-trigger" data-award="cju-research">
+                    <strong>2025년 CJU 연구 연계 교육 우수사례</strong>
+                    <span>자율 군집 드론 기술 시뮬레이션</span>
+                  </button>
+                </li>
+                <li class="award-clickable">
+                  <button type="button" class="award-trigger" data-award="excellent-paper">
+                    <strong>2025년 우수발표 논문 수상 (발표자)</strong>
+                    <span>항공우주시스템공학회 추계학술대회 </span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+
+            <div aria-labelledby="academic-title">
+              <h3 id="academic-title">학술 활동</h3>
+              <ul class="resume-list rich-list">
+                <li>대전제어로봇시스템학회 학부생 논문경진대회 참가 경험 (2024년)</li>
+                <li class="award-clickable">
+                  <button type="button" class="award-trigger" data-award="industry-challenge">
+                    <strong>산학프로젝트챌린지 본선 참가 경험</strong>
+                  </button>
+                </li>
+                <li class="award-clickable">
+                  <button type="button" class="award-trigger" data-award="aiaa">
+                    <strong>AIAA Scitech 구두 발표 (2026)</strong>
+                  </button>
+                </li>
+              </ul>
+            </div>
           </section>
         </div>
       </section>
@@ -357,15 +371,15 @@
             <strong>🇰🇷 South Korea</strong>
           </div>
           <div class="contact-item">
-            <span>소속</span>
+            <span>🧪 소속</span>
             <strong>intRoLAB</strong>
           </div>
           <a href="tel:01090641414" class="contact-item">
-            <span>전화</span>
+            <span>📞 전화</span>
             <strong>010-9064-1414</strong>
           </a>
           <a href="mailto:wldbsehdtjs@naver.com" class="contact-item">
-            <span>이메일</span>
+            <span>✉️ 이메일</span>
             <strong>wldbsehdtjs@naver.com</strong>
           </a>
         </address>
@@ -383,22 +397,24 @@
 
         <div class="detail-grid">
           <section>
-            <h3>문제 정의</h3>
+            <h3 class="project-overview-heading">프로젝트 개요</h3>
             <p class="dialog-problem"></p>
           </section>
           <section>
-            <h3>구현 내용</h3>
-            <ul class="dialog-features"></ul>
+            <h3 class="project-role-heading">담당 역할</h3>
+            <ul class="dialog-role dialog-features"></ul>
           </section>
           <section>
-            <h3>기술 스택</h3>
-            <div class="chips dialog-stack"></div>
+            <h3 class="project-content-heading">교육 내용</h3>
+            <ul class="dialog-project-content dialog-features"></ul>
           </section>
           <section>
-            <h3>성과</h3>
-            <p class="dialog-impact"></p>
+            <h3 class="project-impact-heading">성과</h3>
+            <ul class="dialog-impact dialog-features"></ul>
           </section>
         </div>
+
+        <div class="project-gallery" hidden></div>
       </div>
     </dialog>
 

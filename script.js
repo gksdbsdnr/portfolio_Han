@@ -13,18 +13,34 @@ const skillCloseButton = document.querySelector(".skill-dialog-close");
 const projects = {
   "drone-coder": {
     category: "충청북도 교육청",
-    title: "드론코더300",
+    title: "드론코더300 프로젝트",
     summary:
-      "드론과 코딩 교육을 연결해 학생들이 무인항공기 구조와 제어 개념을 실습할 수 있도록 구성한 교육 과제입니다.",
+      "충청북도교육청과 청주대학교 드론UAM연구센터가 공동 운영한 미래 드론 인재 양성 프로젝트로 초·중·고 학생 및 교원을 대상으로 드론 조종, 코딩, 항공우주 융합 교육 프로그램 운영에 참여했습니다.",
     problem:
       "드론 교육은 하드웨어 조립, 센서 이해, 코딩 제어가 함께 필요해 초심자가 단계적으로 접근하기 어렵습니다.",
+    role: [
+      "드론 조종 및 코딩 교육 프로그램 운영 참여",
+      "아두이노 기반 드론 실습 과정 보조",
+      "학생 및 교원 대상 실습 진행과 교육 지원",
+    ],
     features: [
       "아두이노 기반 드론 실습 구성",
       "드론 동작 원리와 코딩 교육 흐름 정리",
       "교육 현장에서 활용 가능한 실습 중심 콘텐츠 구성",
     ],
     stack: ["Arduino", "Drone", "Education", "UAV"],
-    impact: "무인항공기와 코딩을 함께 경험할 수 있는 교육형 프로젝트 수행 경험을 쌓았습니다.",
+    impact: [
+      "다수의 학생 및 교원 대상 드론 교육 수행",
+      "UAV 시스템 설명 및 교육 역량 확보",
+      "드론 실습 프로그램 운영 경험 축적"
+    ],
+    images: [
+      {
+        src: "assets/projects/drone-coder-education.jpg",
+        alt: "드론코더300 교육 현장 사진",
+        caption: "드론코더300 교육 사진",
+      },
+    ],
   },
   "ligdna-swarm": {
     category: "LIGDNA",
@@ -40,6 +56,18 @@ const projects = {
     ],
     stack: ["UAV Swarm", "Target Recognition", "Computer Vision", "AI"],
     impact: "방산 분야 무인 시스템에서 객체 인식 기술이 활용되는 방향을 이해하고 연구 경험을 확장했습니다.",
+    images: [
+      {
+        src: "assets/projects/target-recognition-1.png",
+        alt: "군집 무인기 표적인식 과제 이미지 1",
+        caption: "표적인식 과제 결과 이미지 1",
+      },
+      {
+        src: "assets/projects/target-recognition-2.png",
+        alt: "군집 무인기 표적인식 과제 이미지 2",
+        caption: "표적인식 과제 결과 이미지 2",
+      },
+    ],
   },
   "etri-aam": {
     category: "ETRI",
@@ -141,6 +169,17 @@ const papers = {
 };
 
 const awards = {
+  "cju-research": {
+    title: "2025년 CJU 연구 연계 교육 우수사례",
+    summary: "청주대학교 연구 연계 교육 프로그램에 참여하여 전공 지식을 실제 연구 과제와 연계하고 연구 성과를 교육 활동에 적용한 우수사례로 선정되었습니다.",
+    images: [
+      {
+        src: "assets/awards/cju-research-education.jpg",
+        alt: "CJU 연구 연계 교육 우수사례 사진",
+        caption: "CJU 연구 연계 교육 우수사례",
+      },
+    ],
+  },
   "ip-mobility": {
     title: "2024년 IP & 모빌리티 융합 디자인 경진대회 최우수상",
     summary:
@@ -151,11 +190,16 @@ const awards = {
         alt: "IP & 모빌리티 융합 디자인 경진대회 최우수상 사진",
         caption: "최우수상 관련 사진",
       },
+      {
+        src: "assets/awards/ip-mobility-award2.jpg",
+        alt: "IP & 모빌리티 융합 디자인 경진대회 최우수상 사진",
+        caption: "최우수상 관련 사진",
+      },  
     ],
   },
   "industry-challenge": {
     title: "산학프로젝트챌린지 본선 참가 경험",
-    summary: "산학프로젝트챌린지 본선 참가 활동 증명 자료입니다.",
+    summary: "산업통상자원부 주최 산학프로젝트 챌린지에 참가하여 산업체 연계 연구개발 과제를 수행하고 프로젝트 성과를 발표하였습니다.",
     images: [
       {
         src: "assets/awards/industry-project-challenge.jpg",
@@ -313,30 +357,64 @@ function closeOpenModals(updateHistory = true) {
 function openProject(projectId) {
   const project = projects[projectId];
   if (!project) return;
+  const isDroneCoder = projectId === "drone-coder";
 
   setDialogText(dialog, ".dialog-category", project.category);
   setDialogText(dialog, "#dialog-title", project.title);
   setDialogText(dialog, ".dialog-summary", project.summary);
   setDialogText(dialog, ".dialog-problem", project.problem);
-  setDialogText(dialog, ".dialog-impact", project.impact);
+  setDialogText(dialog, ".project-overview-heading", isDroneCoder ? "프로젝트 개요" : "문제 정의");
+  setDialogText(dialog, ".project-role-heading", isDroneCoder ? "담당 역할" : "구현 내용");
+  setDialogText(dialog, ".project-content-heading", isDroneCoder ? "교육 내용" : "기술 스택");
+  setDialogText(dialog, ".project-impact-heading", "성과");
 
-  const featureList = dialog.querySelector(".dialog-features");
+  const roleList = dialog.querySelector(".dialog-role");
+  const roles = isDroneCoder ? project.role || [] : project.features || [];
+  roleList.replaceChildren(
+    ...roles.map((role) => {
+      const item = document.createElement("li");
+      item.textContent = role;
+      return item;
+    }),
+  );
+
+  const featureList = dialog.querySelector(".dialog-project-content");
+  const contentItems = isDroneCoder ? project.features || [] : project.stack || [];
   featureList.replaceChildren(
-    ...project.features.map((feature) => {
+    ...contentItems.map((feature) => {
       const item = document.createElement("li");
       item.textContent = feature;
       return item;
     }),
   );
 
-  const stackList = dialog.querySelector(".dialog-stack");
-  stackList.replaceChildren(
-    ...project.stack.map((skill) => {
-      const item = document.createElement("span");
-      item.textContent = skill;
+  const impactList = dialog.querySelector(".dialog-impact");
+  const impacts = Array.isArray(project.impact) ? project.impact : [project.impact];
+  impactList.replaceChildren(
+    ...impacts.map((impact) => {
+      const item = document.createElement("li");
+      item.textContent = impact;
       return item;
     }),
   );
+
+  const projectGallery = dialog.querySelector(".project-gallery");
+  const images = project.images || [];
+  projectGallery.replaceChildren(
+    ...images.map((image) => {
+      const figure = document.createElement("figure");
+      const img = document.createElement("img");
+      const caption = document.createElement("figcaption");
+
+      img.src = image.src;
+      img.alt = image.alt;
+      caption.textContent = image.caption;
+
+      figure.append(img, caption);
+      return figure;
+    }),
+  );
+  projectGallery.hidden = images.length === 0;
 
   openModal(dialog);
 }
