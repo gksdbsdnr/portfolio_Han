@@ -312,8 +312,7 @@ function applyTheme(theme) {
 }
 
 const savedTheme = localStorage.getItem("portfolio-theme");
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-applyTheme(savedTheme || (prefersDark ? "dark" : "light"));
+applyTheme(savedTheme || "dark");
 
 themeButton.addEventListener("click", () => {
   applyTheme(root.dataset.theme === "dark" ? "light" : "dark");
