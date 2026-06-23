@@ -243,6 +243,66 @@ const awards = {
 };
 
 const skills = {
+  programming: {
+    title: "Programming Languages",
+    summary: "Python, MATLAB / Simulink, C / C++ 기반 구현 경험을 정리할 수 있는 영역입니다.",
+    experience: [
+      "Python: 실험 자동화, 데이터 처리, AI 모델 추론 파이프라인 구현",
+      "MATLAB / Simulink: 비행 동역학 및 제어 모델링",
+      "C / C++: 임베디드 및 로보틱스 기초 구현",
+    ],
+    tags: ["Python", "MATLAB / Simulink", "C / C++"],
+    video: "",
+    videoCaption: "Programming Languages 관련 시연 영상",
+  },
+  "ai-vision": {
+    title: "AI & Computer Vision",
+    summary: "객체 인식, 모델 변환, 엣지 추론 최적화 경험을 정리할 수 있는 영역입니다.",
+    experience: [
+      "PyTorch 기반 객체 인식 모델 학습 및 실험",
+      "ONNX / TensorRT 변환을 통한 추론 최적화",
+      "YOLO 기반 Object Detection 및 Auto Labeling 데이터셋 생성",
+    ],
+    tags: ["PyTorch", "ONNX", "TensorRT", "YOLO", "Auto Labeling"],
+    video: "",
+    videoCaption: "AI & Computer Vision 관련 시연 영상",
+  },
+  embedded: {
+    title: "Embedded Systems",
+    summary: "NVIDIA Jetson, RealSense Camera, Arduino 기반 실험 내용을 정리할 수 있는 영역입니다.",
+    experience: [
+      "NVIDIA Jetson 기반 엣지 AI 추론 환경 구성",
+      "Intel RealSense Camera를 활용한 센서 데이터 취득",
+      "Arduino 기반 센서 제어 및 교육용 실습 구성",
+    ],
+    tags: ["NVIDIA Jetson", "Intel RealSense", "Arduino"],
+    video: "",
+    videoCaption: "Embedded Systems 관련 시연 영상",
+  },
+  "uav-robotics": {
+    title: "UAV & Robotics",
+    summary: "PX4, MAVLink, QGroundControl, ROS2, Crazyflie 관련 경험을 정리할 수 있는 영역입니다.",
+    experience: [
+      "PX4 SITL 기반 비행 시뮬레이션 및 제어 실험",
+      "MAVLink / QGroundControl을 활용한 무인기 운용 흐름 이해",
+      "ROS2 및 Crazyflie 기반 로보틱스 실험 확장",
+    ],
+    tags: ["PX4 SITL", "MAVLink", "QGroundControl", "ROS2", "Crazyflie"],
+    video: "",
+    videoCaption: "UAV & Robotics 관련 시연 영상",
+  },
+  simulation: {
+    title: "Simulation",
+    summary: "Unreal Engine 5, AirSim, Cesium for Unreal 기반 가상 환경 구현 경험을 정리할 수 있는 영역입니다.",
+    experience: [
+      "Unreal Engine 5 기반 가상 실험 환경 구성",
+      "AirSim을 활용한 UAV 영상 데이터 및 시뮬레이션 실험",
+      "Cesium for Unreal 기반 지형/도심 환경 연동",
+    ],
+    tags: ["Unreal Engine 5", "AirSim", "Cesium for Unreal"],
+    video: "",
+    videoCaption: "Simulation 관련 시연 영상",
+  },
   python: {
     title: "Python",
     summary: "실험 데이터 처리, 객체 탐지 결과 분석, 자동화 스크립트 작성에 활용합니다.",
@@ -539,8 +599,14 @@ document.querySelectorAll(".award-trigger").forEach((item) => {
   item.addEventListener("click", () => openAward(item.dataset.award));
 });
 
-document.querySelectorAll(".skill-row").forEach((item) => {
+document.querySelectorAll(".skill-row, .skill-category[data-skill]").forEach((item) => {
   item.addEventListener("click", () => openSkill(item.dataset.skill));
+  item.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openSkill(item.dataset.skill);
+    }
+  });
 });
 
 closeButton.addEventListener("click", () => closeModal(dialog));

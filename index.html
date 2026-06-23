@@ -232,47 +232,55 @@
           <h2 id="skills-title">3. 기술 스택</h2>
         </div>
 
-        <div class="skill-levels" aria-label="기술 스택 숙련도">
-          <button class="skill-row" type="button" data-skill="python" style="--level: 76%" aria-haspopup="dialog">
-            <div>
-              <strong>Python</strong>
-              <span>데이터 처리 및 실험 자동화</span>
-            </div>
-            <span class="skill-meter" aria-hidden="true"><span></span></span>
-            <b>3.8</b>
-          </button>
-          <button class="skill-row" type="button" data-skill="matlab" style="--level: 68%" aria-haspopup="dialog">
-            <div>
-              <strong>MATLAB / Simulink</strong>
-              <span>비행 동역학 및 제어 모델링</span>
-            </div>
-            <span class="skill-meter" aria-hidden="true"><span></span></span>
-            <b>3.4</b>
-          </button>
-          <button class="skill-row" type="button" data-skill="arduino" style="--level: 72%" aria-haspopup="dialog">
-            <div>
-              <strong>Arduino</strong>
-              <span>드론 제작 및 센서 제어 실습</span>
-            </div>
-            <span class="skill-meter" aria-hidden="true"><span></span></span>
-            <b>3.6</b>
-          </button>
-          <button class="skill-row" type="button" data-skill="unreal" style="--level: 64%" aria-haspopup="dialog">
-            <div>
-              <strong>Unreal Engine</strong>
-              <span>가상 환경 구현 및 영상 항법 실험</span>
-            </div>
-            <span class="skill-meter" aria-hidden="true"><span></span></span>
-            <b>3.2</b>
-          </button>
-          <button class="skill-row" type="button" data-skill="jetson" style="--level: 74%" aria-haspopup="dialog">
-            <div>
-              <strong>Jetson</strong>
-              <span>임베디드 객체 탐지 및 모델 최적화</span>
-            </div>
-            <span class="skill-meter" aria-hidden="true"><span></span></span>
-            <b>3.7</b>
-          </button>
+        <div class="skill-categories" aria-label="기술 스택 목록">
+          <section class="skill-category" data-skill="programming" role="button" tabindex="0" aria-haspopup="dialog">
+            <h3>Programming Languages</h3>
+            <ul class="skill-list">
+              <li>Python</li>
+              <li>MATLAB / Simulink</li>
+              <li>C / C++ <span>Basic</span></li>
+            </ul>
+          </section>
+
+          <section class="skill-category" data-skill="ai-vision" role="button" tabindex="0" aria-haspopup="dialog">
+            <h3>AI &amp; Computer Vision</h3>
+            <ul class="skill-list">
+              <li>PyTorch</li>
+              <li>ONNX</li>
+              <li>TensorRT</li>
+              <li>YOLO-based Object Detection</li>
+              <li>Auto Labeling &amp; Dataset Generation</li>
+            </ul>
+          </section>
+
+          <section class="skill-category" data-skill="embedded" role="button" tabindex="0" aria-haspopup="dialog">
+            <h3>Embedded Systems</h3>
+            <ul class="skill-list">
+              <li>NVIDIA Jetson</li>
+              <li>Intel RealSense Camera</li>
+              <li>Arduino</li>
+            </ul>
+          </section>
+
+          <section class="skill-category" data-skill="uav-robotics" role="button" tabindex="0" aria-haspopup="dialog">
+            <h3>UAV &amp; Robotics</h3>
+            <ul class="skill-list">
+              <li>PX4 SITL</li>
+              <li>MAVLink</li>
+              <li>QGroundControl</li>
+              <li>ROS2</li>
+              <li>Crazyflie <span>Nano Drone</span></li>
+            </ul>
+          </section>
+
+          <section class="skill-category" data-skill="simulation" role="button" tabindex="0" aria-haspopup="dialog">
+            <h3>Simulation</h3>
+            <ul class="skill-list">
+              <li>Unreal Engine 5</li>
+              <li>AirSim</li>
+              <li>Cesium for Unreal</li>
+            </ul>
+          </section>
         </div>
       </section>
 
