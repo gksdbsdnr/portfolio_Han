@@ -70,19 +70,78 @@ const projects = {
     ],
   },
   "etri-aam": {
-    category: "ETRI",
-    title: "GNSS-denied 환경에서 지능형 AAM 영상 항법 기술조사 및 구현",
-    summary:
-      "GNSS 사용이 제한된 환경에서 AAM이 영상 기반으로 항법 정보를 확보할 수 있는 기술을 조사하고 구현한 과제입니다.",
-    problem:
-      "도심 환경에서는 GNSS 신호가 불안정하거나 제한될 수 있어 영상 기반 항법과 가상 환경 검증이 필요합니다.",
-    features: [
-      "GNSS-denied 환경의 AAM 영상 항법 기술 조사",
-      "가상 환경 구현 및 영상 기반 항법 흐름 검토",
-      "PX4, Python, Unreal Engine 기반 구현 경험",
-    ],
-    stack: ["PX4", "Python", "Unreal Engine", "AAM"],
-    impact: "AAM 영상 항법 기술의 구현 흐름과 가상 환경 기반 검증 경험을 확보했습니다.",
+      "category": "ETRI",
+      "title": "GNSS-denied 환경에서 지능형 AAM 영상 항법 기술조사 및 구현",
+      "summary": "한국전자통신연구원(ETRI) 주관 과제로, GNSS 신호가 제한되는 환경에서 AAM의 안정적인 자율비행 및 착륙을 지원하기 위한 영상 기반 항법 기술을 조사하고 시뮬레이션 프로토타입을 구현했습니다.",
+      "problem": "과제명: GNSS-denied 환경에서 지능형 AAM 영상 항법 기술조사 및 구현\n주관기관: 한국전자통신연구원(ETRI)\n청주대학교 역할: 영상 기반 항법 기술 조사 및 자율착륙 프로토타입 구현",
+      "role": [
+          {
+              "heading": "영상 기반 항법 기술 조사 및 분석",
+              "items": [
+                  "GNSS-denied 환경에서 활용 가능한 영상 기반 항법 기술 조사",
+                  "Visual SLAM, Visual Odometry, Vision-based Navigation 등 국내·외 연구 동향 분석",
+                  "AAM 적용 사례 및 최신 기술 동향 조사"
+              ]
+          },
+          {
+              "heading": "시뮬레이션 환경 구축",
+              "items": [
+                  "Unreal Engine 기반 AAM 자율착륙 시뮬레이션 환경 구축",
+                  "PX4 SITL 연동을 통한 비행 환경 구성",
+                  "Python 기반 자동 비행 및 실험 환경 구현"
+              ]
+          },
+          {
+              "heading": "프로토타입 구현 및 검증",
+              "items": [
+                  "영상 기반 자율착륙 프로토타입 구현 지원",
+                  "시뮬레이션 기반 비행 시험 수행",
+                  "실험 결과 분석 및 기술 보고서 작성"
+              ]
+          }
+      ],
+      "features": [
+          "GNSS-denied 환경을 위한 영상 기반 항법 기술 조사",
+          "국내·외 선행기술 분석",
+          "AAM 자율착륙 시뮬레이션 프로토타입 구현",
+          "기술 검증 및 연구 결과 정리"
+      ],
+      "stack": [
+          "Python",
+          "PX4 SITL",
+          "Unreal Engine",
+          "Computer Vision",
+          "Visual Navigation",
+          "AAM Simulation"
+      ],
+      "impact": [
+          {
+              "heading": "Challenge",
+              "items": [
+                  "GNSS 신호가 제한되는 환경에서는 기존 위성항법 기반 위치 추정이 불가능하여 안정적인 자율비행 및 착륙이 어려운 문제가 존재함."
+              ]
+          },
+          {
+              "heading": "Solution",
+              "items": [
+                  "영상 기반 항법 기술을 조사·분석하고 AAM 적용 가능성을 검토하였으며, Unreal Engine과 PX4 SITL을 활용한 자율착륙 시뮬레이션 환경을 구축하여 영상 기반 자율착륙 프로토타입을 구현 및 검증함."
+              ]
+          },
+          {
+              "heading": "Results",
+              "items": [
+                  "GNSS-denied 환경을 위한 영상 기반 항법 기술 조사 완료",
+                  "AAM 자율착륙 시뮬레이션 프로토타입 구현",
+                  "PX4 기반 자율비행 시뮬레이션 환경 구축",
+                  "영상 기반 항법 기술 검증 및 연구 결과 도출",
+                  "기술 보고서 작성 및 연구 과제 수행 지원"
+              ]
+          }
+      ],
+      "video": {
+          "src": "assets/videos/ETRI_pf.mp4",
+          "caption": "GNSS-denied AAM 영상 항법 및 자율착륙 시뮬레이션 프로토타입"
+      }
   },
   "defense-sw": {
     category: "산자부",
@@ -382,6 +441,35 @@ function setDialogText(parent, selector, value) {
   parent.querySelector(selector).textContent = value;
 }
 
+function renderFeatureItems(list, items) {
+  list.replaceChildren(
+    ...items.map((itemData) => {
+      const item = document.createElement("li");
+
+      if (typeof itemData === "string") {
+        item.textContent = itemData;
+        return item;
+      }
+
+      const heading = document.createElement("h4");
+      const nestedList = document.createElement("ul");
+
+      item.className = "feature-group";
+      heading.textContent = itemData.heading;
+      nestedList.replaceChildren(
+        ...(itemData.items || []).map((text) => {
+          const nestedItem = document.createElement("li");
+          nestedItem.textContent = text;
+          return nestedItem;
+        }),
+      );
+
+      item.append(heading, nestedList);
+      return item;
+    }),
+  );
+}
+
 const modalDialogs = [dialog, paperDialog, awardDialog, skillDialog];
 
 function openModal(modal) {
@@ -417,45 +505,28 @@ function openProject(projectId) {
   const project = projects[projectId];
   if (!project) return;
   const isDroneCoder = projectId === "drone-coder";
+  const isEtriAam = projectId === "etri-aam";
 
   setDialogText(dialog, ".dialog-category", project.category);
   setDialogText(dialog, "#dialog-title", project.title);
   setDialogText(dialog, ".dialog-summary", project.summary);
   setDialogText(dialog, ".dialog-problem", project.problem);
-  setDialogText(dialog, ".project-overview-heading", isDroneCoder ? "프로젝트 개요" : "문제 정의");
-  setDialogText(dialog, ".project-role-heading", isDroneCoder ? "담당 역할" : "구현 내용");
+  setDialogText(dialog, ".project-overview-heading", isDroneCoder || isEtriAam ? "과제 개요" : "문제 정의");
+  setDialogText(dialog, ".project-role-heading", isDroneCoder ? "담당 역할" : isEtriAam ? "나의 역할" : "구현 내용");
   setDialogText(dialog, ".project-content-heading", isDroneCoder ? "교육 내용" : "기술 스택");
-  setDialogText(dialog, ".project-impact-heading", "성과");
+  setDialogText(dialog, ".project-impact-heading", isEtriAam ? "Challenge / Solution / Results" : "성과");
 
   const roleList = dialog.querySelector(".dialog-role");
-  const roles = isDroneCoder ? project.role || [] : project.features || [];
-  roleList.replaceChildren(
-    ...roles.map((role) => {
-      const item = document.createElement("li");
-      item.textContent = role;
-      return item;
-    }),
-  );
+  const roles = isDroneCoder || isEtriAam ? project.role || [] : project.features || [];
+  renderFeatureItems(roleList, roles);
 
   const featureList = dialog.querySelector(".dialog-project-content");
   const contentItems = isDroneCoder ? project.features || [] : project.stack || [];
-  featureList.replaceChildren(
-    ...contentItems.map((feature) => {
-      const item = document.createElement("li");
-      item.textContent = feature;
-      return item;
-    }),
-  );
+  renderFeatureItems(featureList, contentItems);
 
   const impactList = dialog.querySelector(".dialog-impact");
   const impacts = Array.isArray(project.impact) ? project.impact : [project.impact];
-  impactList.replaceChildren(
-    ...impacts.map((impact) => {
-      const item = document.createElement("li");
-      item.textContent = impact;
-      return item;
-    }),
-  );
+  renderFeatureItems(impactList, impacts);
 
   const projectGallery = dialog.querySelector(".project-gallery");
   const images = project.images || [];
@@ -474,6 +545,24 @@ function openProject(projectId) {
     }),
   );
   projectGallery.hidden = images.length === 0;
+
+  const projectVideoWrap = dialog.querySelector(".project-video-wrap");
+  const projectVideo = dialog.querySelector(".project-dialog-video");
+  const projectVideoCaption = dialog.querySelector(".project-video-caption");
+
+  projectVideo.pause();
+  projectVideo.removeAttribute("src");
+  projectVideo.load();
+
+  if (project.video?.src) {
+    projectVideo.src = project.video.src;
+    projectVideoCaption.textContent = project.video.caption || "";
+    projectVideoWrap.hidden = false;
+  } else {
+    projectVideoWrap.hidden = true;
+  }
+
+
 
   openModal(dialog);
 }
@@ -640,6 +729,11 @@ skillDialog.addEventListener("click", (event) => {
 
 skillDialog.addEventListener("close", () => {
   const video = skillDialog.querySelector(".skill-dialog-video");
+  video.pause();
+});
+
+dialog.addEventListener("close", () => {
+  const video = dialog.querySelector(".project-dialog-video");
   video.pause();
 });
 

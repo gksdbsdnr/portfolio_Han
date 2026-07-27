@@ -1033,11 +1033,86 @@ h3 {
   margin-top: 28px;
 }
 
+.project-video-wrap {
+  display: grid;
+  gap: 8px;
+  margin: 24px 0 0;
+}
+
+.project-video-wrap[hidden] {
+  display: none;
+}
+
+.project-dialog-video {
+  width: 100%;
+  max-height: 62vh;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #000;
+}
+
+.project-video-caption {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
 .detail-grid section {
   padding: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--surface-strong);
+}
+
+.project-detail-grid {
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.project-detail-grid section {
+  padding: clamp(18px, 3vw, 26px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-strong);
+}
+
+.project-detail-grid h3 {
+  color: var(--accent-strong);
+  font-size: clamp(1.28rem, 2.3vw, 1.78rem);
+  line-height: 1.32;
+}
+
+.project-detail-grid h4 {
+  margin: 22px 0 10px;
+  color: var(--accent-warm);
+  font-size: clamp(1.04rem, 1.8vw, 1.28rem);
+  line-height: 1.35;
+}
+
+.project-detail-grid h4:first-child {
+  margin-top: 0;
+}
+
+.project-detail-grid .dialog-features {
+  gap: 8px;
+  padding-left: 28px;
+  color: var(--muted);
+  font-size: clamp(0.98rem, 1.35vw, 1.08rem);
+  line-height: 1.65;
+}
+
+.project-detail-grid .dialog-features > .feature-group {
+  list-style: none;
+}
+
+.project-detail-grid .dialog-features > .feature-group > ul {
+  margin: 0;
+  padding-left: 24px;
+  color: var(--text);
+}
+
+.project-detail-grid .dialog-features > li:not(.feature-group) {
+  color: var(--text);
 }
 
 .detail-grid h3 {
@@ -1048,6 +1123,10 @@ h3 {
 .detail-grid ul {
   margin: 0;
   color: var(--muted);
+}
+
+.dialog-problem {
+  white-space: pre-line;
 }
 
 .dialog-features {
