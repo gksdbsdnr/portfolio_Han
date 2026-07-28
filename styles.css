@@ -126,6 +126,12 @@ img {
   font-size: 1.12rem;
 }
 
+.brand-mark img {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
 .brand-text {
   letter-spacing: 0;
 }
@@ -1067,6 +1073,10 @@ h3 {
 .project-detail-grid {
   grid-template-columns: 1fr;
   gap: 18px;
+}
+
+.detail-grid.project-detail-grid {
+  grid-template-columns: 1fr;
 }
 
 .project-detail-grid section {
