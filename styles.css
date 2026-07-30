@@ -294,7 +294,8 @@ h3 {
   margin: 0;
 }
 
-.profile-media-grid img {
+.profile-media-grid img,
+.profile-media-grid video {
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -307,7 +308,8 @@ h3 {
   object-position: center top;
 }
 
-.research-photo-card img {
+.research-photo-card img,
+.research-photo-card video {
   aspect-ratio: 4 / 3;
   object-position: center;
 }
@@ -1145,7 +1147,8 @@ h3 {
   padding-left: 18px;
 }
 
-.paper-link {
+.paper-link,
+.award-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;

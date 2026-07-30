@@ -298,6 +298,10 @@ const awards = {
         caption: "AIAA 발표 자료",
       },
     ],
+    attachment: {
+      href: "assets/papers/AIAA%20SciTech_review.pdf",
+      label: "AIAA SciTech review 파일 보기",
+    },
   },
 };
 
@@ -628,6 +632,15 @@ function openAward(awardId) {
       return figure;
     }),
   );
+
+  const awardLink = awardDialog.querySelector(".award-link");
+  if (award.attachment?.href) {
+    awardLink.href = award.attachment.href;
+    awardLink.textContent = award.attachment.label || "첨부 파일 보기";
+    awardLink.hidden = false;
+  } else {
+    awardLink.hidden = true;
+  }
 
   openModal(awardDialog);
 }
