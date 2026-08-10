@@ -235,55 +235,17 @@
           <h2 id="skills-title">3. 기술 스택</h2>
         </div>
 
-        <div class="skill-categories" aria-label="기술 스택 목록">
-          <section class="skill-category" data-skill="programming" role="button" tabindex="0" aria-haspopup="dialog">
-            <h3>Programming Languages</h3>
-            <ul class="skill-list">
-              <li>Python</li>
-              <li>MATLAB / Simulink</li>
-              <li>C / C++ <span>Basic</span></li>
-            </ul>
-          </section>
-
-          <section class="skill-category" data-skill="ai-vision" role="button" tabindex="0" aria-haspopup="dialog">
-            <h3>AI &amp; Computer Vision</h3>
-            <ul class="skill-list">
-              <li>PyTorch</li>
-              <li>ONNX</li>
-              <li>TensorRT</li>
-              <li>YOLO-based Object Detection</li>
-              <li>Auto Labeling &amp; Dataset Generation</li>
-            </ul>
-          </section>
-
-          <section class="skill-category" data-skill="embedded" role="button" tabindex="0" aria-haspopup="dialog">
-            <h3>Embedded Systems</h3>
-            <ul class="skill-list">
-              <li>NVIDIA Jetson</li>
-              <li>Intel RealSense Camera</li>
-              <li>Arduino</li>
-            </ul>
-          </section>
-
-          <section class="skill-category" data-skill="uav-robotics" role="button" tabindex="0" aria-haspopup="dialog">
-            <h3>UAV &amp; Robotics</h3>
-            <ul class="skill-list">
-              <li>PX4 SITL</li>
-              <li>MAVLink</li>
-              <li>QGroundControl</li>
-              <li>ROS2</li>
-              <li>Crazyflie <span>Nano Drone</span></li>
-            </ul>
-          </section>
-
-          <section class="skill-category" data-skill="simulation" role="button" tabindex="0" aria-haspopup="dialog">
-            <h3>Simulation</h3>
-            <ul class="skill-list">
-              <li>Unreal Engine 5</li>
-              <li>AirSim</li>
-              <li>Cesium for Unreal</li>
-            </ul>
-          </section>
+        <div class="skill-donut-layout" aria-label="기술 스택 카테고리 도넛 차트">
+          <div class="skill-donut-stage">
+            <svg class="skill-donut" viewBox="0 0 720 440" role="img" aria-label="기술 스택 카테고리 도넛 차트">
+              <circle class="skill-donut-track" cx="360" cy="220" r="150"></circle>
+            </svg>
+            <div class="skill-donut-center" aria-live="polite">
+              <span class="skill-center-kicker" aria-hidden="true"></span>
+              <strong class="skill-center-title">TECH STACK</strong>
+              <small class="skill-center-subtitle">CLICK TO EXPLORE</small>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -488,21 +450,21 @@
         <h2 id="skill-dialog-title"></h2>
         <p class="dialog-summary skill-dialog-summary"></p>
 
-        <div class="skill-detail-grid">
-          <section>
-            <h3>활용 경험</h3>
-            <ul class="skill-dialog-experience dialog-features"></ul>
-          </section>
-          <section>
-            <h3>적용 분야</h3>
-            <div class="chips skill-dialog-tags"></div>
-          </section>
-        </div>
+        <div class="skill-modal-divider" aria-hidden="true"></div>
+        <div class="skill-modal-tech-list"></div>
+        <div class="skill-modal-divider" aria-hidden="true"></div>
 
-        <figure class="skill-video-wrap" hidden>
-          <video class="skill-dialog-video" controls playsinline preload="metadata"></video>
-          <figcaption class="skill-video-caption"></figcaption>
-        </figure>
+        <button class="skill-modal-project-link" type="button" hidden>관련 프로젝트 보기 →</button>
+        <div class="skill-modal-nav" aria-label="기술 스택 이동">
+          <button class="skill-modal-nav-button skill-modal-prev" type="button">
+            <span>이전 기술</span>
+            <strong></strong>
+          </button>
+          <button class="skill-modal-nav-button skill-modal-next" type="button">
+            <span>다음 기술</span>
+            <strong></strong>
+          </button>
+        </div>
       </div>
     </dialog>
 

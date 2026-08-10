@@ -300,7 +300,7 @@ const awards = {
     ],
     attachment: {
       href: "assets/papers/AIAA%20SciTech_review.pdf",
-      label: "AIAA SciTech review 파일 보기",
+      label: "첨부 파일 보기",
     },
   },
 };
@@ -308,126 +308,106 @@ const awards = {
 const skills = {
   programming: {
     title: "Programming Languages",
-    summary: "Python, MATLAB / Simulink, C / C++ 기반 구현 경험을 정리할 수 있는 영역입니다.",
-    experience: [
-      "Python: 실험 자동화, 데이터 처리, AI 모델 추론 파이프라인 구현",
-      "MATLAB / Simulink: 비행 동역학 및 제어 모델링",
-      "C / C++: 임베디드 및 로보틱스 기초 구현",
+    summary: "Python, MATLAB / Simulink, C / C++ 기반 구현 역량을 정리한 카테고리입니다.",
+    technologies: [
+      {
+        name: "Python",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. 실험 자동화, 데이터 처리, AI 추론 파이프라인 등 실제 사용 내용을 추가하세요.",
+      },
+      {
+        name: "MATLAB / Simulink",
+        experience:
+          "제어공학 교과 및 텀프로젝트에서 시스템 모델링, 제어기 설계 및 시뮬레이션에 활용했습니다. 또한 실험 및 연구 데이터 분석과 결과 그래프 시각화에 활용했습니다.",
+      },
+      {
+        name: "C / C++ (Basic)",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. 임베디드 기초 구현이나 로보틱스 실습 내용을 추가하세요.",
+      },
     ],
-    tags: ["Python", "MATLAB / Simulink", "C / C++"],
-    video: "",
-    videoCaption: "Programming Languages 관련 시연 영상",
+    project: "defense-sw",
+    projectLabel: "항공방산SW인력양성사업",
   },
-  "ai-vision": {
+  ai: {
     title: "AI & Computer Vision",
-    summary: "객체 인식, 모델 변환, 엣지 추론 최적화 경험을 정리할 수 있는 영역입니다.",
-    experience: [
-      "PyTorch 기반 객체 인식 모델 학습 및 실험",
-      "ONNX / TensorRT 변환을 통한 추론 최적화",
-      "YOLO 기반 Object Detection 및 Auto Labeling 데이터셋 생성",
+    summary: "객체 인식, 모델 변환, 추론 최적화 관련 기술을 정리한 카테고리입니다.",
+    technologies: [
+      {
+        name: "PyTorch",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. 모델 학습, 실험 관리, 성능 비교 내용을 추가하세요.",
+      },
+      {
+        name: "ONNX",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. 모델 변환 및 배포 전처리 경험을 추가하세요.",
+      },
+      {
+        name: "TensorRT",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. Jetson 환경 추론 최적화 내용을 추가하세요.",
+      },
+      {
+        name: "YOLO",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. 객체 탐지, 데이터셋 구성, 실험 결과 내용을 추가하세요.",
+      },
     ],
-    tags: ["PyTorch", "ONNX", "TensorRT", "YOLO", "Auto Labeling"],
-    video: "",
-    videoCaption: "AI & Computer Vision 관련 시연 영상",
+    project: "ligdna-swarm",
+    projectLabel: "군집 무인기 표적인식",
   },
   embedded: {
     title: "Embedded Systems",
-    summary: "NVIDIA Jetson, RealSense Camera, Arduino 기반 실험 내용을 정리할 수 있는 영역입니다.",
-    experience: [
-      "NVIDIA Jetson 기반 엣지 AI 추론 환경 구성",
-      "Intel RealSense Camera를 활용한 센서 데이터 취득",
-      "Arduino 기반 센서 제어 및 교육용 실습 구성",
+    summary: "센서, 엣지 컴퓨팅, 교육용 프로토타이핑 기술을 정리한 카테고리입니다.",
+    technologies: [
+      {
+        name: "Arduino",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. 센서 제어, 교육 실습, 프로토타입 제작 내용을 추가하세요.",
+      },
+      {
+        name: "Intel RealSense",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. 카메라 데이터 취득이나 인식 실험 내용을 추가하세요.",
+      },
+      {
+        name: "NVIDIA Jetson",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. 엣지 AI 추론 및 모델 최적화 내용을 추가하세요.",
+      },
     ],
-    tags: ["NVIDIA Jetson", "Intel RealSense", "Arduino"],
-    video: "",
-    videoCaption: "Embedded Systems 관련 시연 영상",
+    project: "drone-coder",
+    projectLabel: "드론코더300",
   },
-  "uav-robotics": {
+  uav: {
     title: "UAV & Robotics",
-    summary: "PX4, MAVLink, QGroundControl, ROS2, Crazyflie 관련 경험을 정리할 수 있는 영역입니다.",
-    experience: [
-      "PX4 SITL 기반 비행 시뮬레이션 및 제어 실험",
-      "MAVLink / QGroundControl을 활용한 무인기 운용 흐름 이해",
-      "ROS2 및 Crazyflie 기반 로보틱스 실험 확장",
+    summary: "무인기 제어, 통신, 소형 드론 실험 관련 기술을 정리한 카테고리입니다.",
+    technologies: [
+      {
+        name: "PX4 SITL",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. 자율비행 시뮬레이션 및 비행 시험 내용을 추가하세요.",
+      },
+      {
+        name: "MAVLink",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. 무인기 통신, 명령 전송, 상태 모니터링 내용을 추가하세요.",
+      },
+      {
+        name: "Crazyflie Nano Drone",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. 소형 드론 실험 및 로보틱스 테스트 내용을 추가하세요.",
+      },
     ],
-    tags: ["PX4 SITL", "MAVLink", "QGroundControl", "ROS2", "Crazyflie"],
-    video: "",
-    videoCaption: "UAV & Robotics 관련 시연 영상",
+    project: "etri-aam",
+    projectLabel: "ETRI AAM 영상 항법",
   },
   simulation: {
     title: "Simulation",
-    summary: "Unreal Engine 5, AirSim, Cesium for Unreal 기반 가상 환경 구현 경험을 정리할 수 있는 영역입니다.",
-    experience: [
-      "Unreal Engine 5 기반 가상 실험 환경 구성",
-      "AirSim을 활용한 UAV 영상 데이터 및 시뮬레이션 실험",
-      "Cesium for Unreal 기반 지형/도심 환경 연동",
+    summary: "가상 환경, UAV 시뮬레이션, 영상 기반 실험 환경 기술을 정리한 카테고리입니다.",
+    technologies: [
+      {
+        name: "Unreal Engine 4.27",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. 가상 환경 구축과 영상 기반 실험 내용을 추가하세요.",
+      },
+      {
+        name: "AirSim",
+        experience: "활용 경험을 입력할 수 있는 placeholder입니다. UAV 시뮬레이션과 데이터 취득 내용을 추가하세요.",
+      },
     ],
-    tags: ["Unreal Engine 5", "AirSim", "Cesium for Unreal"],
-    video: "",
-    videoCaption: "Simulation 관련 시연 영상",
-  },
-  python: {
-    title: "Python",
-    summary: "실험 데이터 처리, 객체 탐지 결과 분석, 자동화 스크립트 작성에 활용합니다.",
-    experience: [
-      "객체 탐지 실험 결과 정리와 데이터 처리",
-      "반복 실험 파일 관리 및 분석 자동화",
-      "성능 비교 결과를 그래프와 표로 정리",
-    ],
-    tags: ["Data Processing", "Automation", "Analysis"],
-    video: "",
-    videoCaption: "Python 기반 실험 자동화 영상",
-  },
-  matlab: {
-    title: "MATLAB / Simulink",
-    summary: "비행 동역학 해석, 제어기 설계, 시뮬레이션 검증에 활용한 도구입니다.",
-    experience: [
-      "비행 동역학 및 제어 과목에서 항공기 모델링 수행",
-      "Simulink 기반 블록 다이어그램으로 시스템 응답 확인",
-      "제어기 성능을 수치와 그래프로 비교",
-    ],
-    tags: ["Flight Dynamics", "Control", "Simulation"],
-    video: "",
-    videoCaption: "MATLAB / Simulink 시뮬레이션 영상",
-  },
-  arduino: {
-    title: "Arduino",
-    summary: "드론 제작, 센서 제어, 교육용 실습 과제에서 활용한 임베디드 플랫폼입니다.",
-    experience: [
-      "드론코더300 및 아두이노 드론 제작 실습 경험",
-      "센서 입력과 모터 제어 흐름 이해",
-      "교육용 드론 실습 구성 및 테스트",
-    ],
-    tags: ["Arduino", "Drone", "Sensor", "Embedded"],
-    video: "",
-    videoCaption: "Arduino 드론 제작 또는 실습 영상",
-  },
-  unreal: {
-    title: "Unreal Engine",
-    summary: "AAM 영상 항법과 객체 인식 검증을 위한 가상 환경 구현에 활용했습니다.",
-    experience: [
-      "GNSS-denied 환경의 가상 시나리오 구현",
-      "영상 기반 항법과 데이터셋 생성 흐름 검토",
-      "가상 환경 기반 실험 조건 구성",
-    ],
-    tags: ["Unreal Engine", "Virtual Environment", "AAM"],
-    video: "",
-    videoCaption: "Unreal Engine 가상 환경 시연 영상",
-  },
-  jetson: {
-    title: "Jetson",
-    summary: "임베디드 환경에서 객체 탐지 모델을 운용하고 최적화하는 데 활용했습니다.",
-    experience: [
-      "Jetson Orin Nano 기반 객체 탐지 실험",
-      "YOLOv11 모델의 TensorRT 최적화 적용",
-      "추론 성능 비교와 임베디드 적용 가능성 분석",
-    ],
-    tags: ["Jetson", "TensorRT", "YOLOv11", "Edge AI"],
-    video: "",
-    videoCaption: "Jetson 기반 객체 탐지 시연 영상",
+    project: "etri-aam",
+    projectLabel: "ETRI AAM 영상 항법",
   },
 };
-
 function applyTheme(theme) {
   root.dataset.theme = theme;
   themeIcon.textContent = theme === "dark" ? "☀" : "☾";
@@ -443,6 +423,252 @@ themeButton.addEventListener("click", () => {
 
 function setDialogText(parent, selector, value) {
   parent.querySelector(selector).textContent = value;
+}
+
+const techCategories = [
+  {
+    id: "programming",
+    label: "PROGRAMMING LANGUAGES",
+    shortLabel: "Programming Languages",
+    technologies: ["Python", "MATLAB / Simulink", "C / C++ Basic"],
+    weight: 22,
+    color: "#76e8bd",
+    side: "left",
+    boxX: 0,
+    boxY: 42,
+    startAngle: 292,
+    endAngle: 372,
+    linePoints: "281,90 230,54 74,54",
+  },
+  {
+    id: "ai",
+    label: "AI & COMPUTER VISION",
+    shortLabel: "AI & Computer Vision",
+    technologies: ["PyTorch", "ONNX", "TensorRT", "YOLO"],
+    weight: 23,
+    color: "#6fa8ff",
+    side: "right",
+    boxX: 422,
+    boxY: 56,
+    startAngle: 12,
+    endAngle: 95,
+    linePoints: "449,104 500,68 650,68",
+  },
+  {
+    id: "embedded",
+    label: "EMBEDDED SYSTEMS",
+    shortLabel: "Embedded Systems",
+    technologies: ["Arduino", "Intel RealSense", "NVIDIA Jetson"],
+    weight: 18,
+    color: "#55c6a9",
+    side: "right",
+    boxX: 422,
+    boxY: 282,
+    startAngle: 103,
+    endAngle: 168,
+    linePoints: "476,296 510,352 652,352",
+  },
+  {
+    id: "uav",
+    label: "UAV & ROBOTICS",
+    shortLabel: "UAV & Robotics",
+    technologies: ["PX4 SITL", "MAVLink", "Crazyflie Nano Drone"],
+    weight: 22,
+    color: "#ff9b54",
+    side: "left",
+    boxX: 0,
+    boxY: 326,
+    startAngle: 176,
+    endAngle: 255,
+    linePoints: "295,354 248,396 92,396",
+  },
+  {
+    id: "simulation",
+    label: "SIMULATION",
+    shortLabel: "Simulation",
+    technologies: ["Unreal Engine 4.27", "AirSim"],
+    weight: 15,
+    color: "#9b7bf4",
+    side: "left",
+    boxX: 0,
+    boxY: 202,
+    startAngle: 263,
+    endAngle: 286,
+    linePoints: "208,218 164,220 46,220",
+  },
+];
+
+function initSkillDonut() {
+  const layout = document.querySelector(".skill-donut-layout");
+  if (!layout) return;
+
+  const svg = layout.querySelector(".skill-donut");
+  const centerTitle = layout.querySelector(".skill-center-title");
+  const centerSubtitle = layout.querySelector(".skill-center-subtitle");
+  const interactiveSelector = ".skill-donut-segment, .skill-connector, .skill-category-panel, .skill-mobile-category";
+
+  function resetDonut() {
+    layout.classList.remove("is-active");
+    layout.querySelectorAll(interactiveSelector).forEach((element) => {
+      element.classList.remove("is-active");
+    });
+    centerTitle.textContent = "TECH STACK";
+    centerSubtitle.textContent = "CLICK TO EXPLORE";
+  }
+
+  function activateCategory(categoryId) {
+    const category = techCategories.find((item) => item.id === categoryId);
+    if (!category) return;
+
+    layout.classList.add("is-active");
+    layout.querySelectorAll(interactiveSelector).forEach((element) => {
+      element.classList.toggle("is-active", element.dataset.category === categoryId);
+    });
+    centerTitle.textContent = "TECH STACK";
+    centerSubtitle.textContent = category.shortLabel;
+  }
+
+  function bindInteraction(element, category, makeFocusable = true) {
+    element.dataset.category = category.id;
+    if (makeFocusable) {
+      element.setAttribute("tabindex", "0");
+      element.setAttribute("role", "button");
+      element.setAttribute("aria-label", category.shortLabel + " detail");
+    }
+    element.addEventListener("mouseenter", () => activateCategory(category.id));
+    element.addEventListener("focus", () => activateCategory(category.id));
+    element.addEventListener("click", () => openSkill(category.id));
+    element.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openSkill(category.id);
+      }
+    });
+  }
+
+  function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
+    const angleInRadians = ((angleInDegrees - 90) * Math.PI) / 180;
+    return {
+      x: centerX + radius * Math.cos(angleInRadians),
+      y: centerY + radius * Math.sin(angleInRadians),
+    };
+  }
+
+  function describeArc(centerX, centerY, radius, startAngle, endAngle) {
+    const start = polarToCartesian(centerX, centerY, radius, endAngle);
+    const end = polarToCartesian(centerX, centerY, radius, startAngle);
+    const largeArcFlag = endAngle - startAngle <= 180 ? "0" : "1";
+    return [
+      "M",
+      start.x.toFixed(2),
+      start.y.toFixed(2),
+      "A",
+      radius,
+      radius,
+      0,
+      largeArcFlag,
+      0,
+      end.x.toFixed(2),
+      end.y.toFixed(2),
+    ].join(" ");
+  }
+
+  techCategories.forEach((category) => {
+    const connector = document.createElementNS("http://www.w3.org/2000/svg", "polyline");
+    connector.classList.add("skill-connector");
+    connector.dataset.category = category.id;
+    connector.setAttribute("points", category.linePoints);
+    svg.append(connector);
+  });
+
+  techCategories.forEach((category) => {
+    const segment = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    segment.classList.add("skill-donut-segment");
+    segment.setAttribute("d", describeArc(360, 220, 150, category.startAngle, category.endAngle));
+    segment.setAttribute("stroke", category.color);
+    bindInteraction(segment, category);
+    svg.append(segment);
+  });
+
+  const leftColumn = document.createElement("div");
+  const rightColumn = document.createElement("div");
+  leftColumn.className = "skill-category-column is-left";
+  rightColumn.className = "skill-category-column is-right";
+
+  function createCategoryPanel(category) {
+    const panel = document.createElement("button");
+    const title = document.createElement("strong");
+    const pillWrap = document.createElement("span");
+
+    panel.className = "skill-category-panel";
+    panel.type = "button";
+    title.className = "skill-category-title";
+    title.textContent = category.label;
+    pillWrap.className = "skill-category-pills";
+    pillWrap.replaceChildren(
+      ...category.technologies.map((techName) => {
+        const pill = document.createElement("span");
+        pill.className = "skill-tech-pill";
+        pill.dataset.category = category.id;
+        pill.textContent = techName;
+        return pill;
+      }),
+    );
+    panel.append(title, pillWrap);
+    bindInteraction(panel, category, false);
+    return panel;
+  }
+
+  techCategories.forEach((category) => {
+    const panel = createCategoryPanel(category);
+    if (category.side === "left") {
+      leftColumn.append(panel);
+    } else {
+      rightColumn.append(panel);
+    }
+  });
+
+  layout.insertBefore(leftColumn, layout.firstElementChild);
+  layout.append(rightColumn);
+
+  const mobileList = document.createElement("div");
+  mobileList.className = "skill-mobile-list";
+  mobileList.replaceChildren(
+    ...techCategories.map((category) => {
+      const item = document.createElement("button");
+      const title = document.createElement("strong");
+      const pillWrap = document.createElement("span");
+
+      item.className = "skill-mobile-category";
+      item.type = "button";
+      item.dataset.category = category.id;
+      title.textContent = category.label;
+      pillWrap.className = "skill-category-pills";
+      pillWrap.replaceChildren(
+        ...category.technologies.map((techName) => {
+          const pill = document.createElement("span");
+          pill.className = "skill-tech-pill";
+          pill.dataset.category = category.id;
+          pill.textContent = techName;
+          return pill;
+        }),
+      );
+      item.append(title, pillWrap);
+      item.addEventListener("click", () => openSkill(category.id));
+      item.addEventListener("mouseenter", () => activateCategory(category.id));
+      item.addEventListener("focus", () => activateCategory(category.id));
+      return item;
+    }),
+  );
+  layout.append(mobileList);
+
+  resetDonut();
+
+  layout.addEventListener("mouseleave", () => {
+    if (!window.matchMedia("(hover: none)").matches) {
+      resetDonut();
+    }
+  });
 }
 
 function renderFeatureItems(list, items) {
@@ -639,6 +865,8 @@ function openAward(awardId) {
     awardLink.textContent = award.attachment.label || "첨부 파일 보기";
     awardLink.hidden = false;
   } else {
+    awardLink.href = "#";
+    awardLink.textContent = "첨부 파일 보기";
     awardLink.hidden = true;
   }
 
@@ -648,43 +876,50 @@ function openAward(awardId) {
 function openSkill(skillId) {
   const skill = skills[skillId];
   if (!skill) return;
+  const currentIndex = techCategories.findIndex((category) => category.id === skillId);
+  const previousCategory = techCategories[(currentIndex - 1 + techCategories.length) % techCategories.length];
+  const nextCategory = techCategories[(currentIndex + 1) % techCategories.length];
 
   setDialogText(skillDialog, "#skill-dialog-title", skill.title);
   setDialogText(skillDialog, ".skill-dialog-summary", skill.summary);
 
-  const experienceList = skillDialog.querySelector(".skill-dialog-experience");
-  experienceList.replaceChildren(
-    ...skill.experience.map((itemText) => {
-      const item = document.createElement("li");
-      item.textContent = itemText;
-      return item;
+  const techList = skillDialog.querySelector(".skill-modal-tech-list");
+  techList.replaceChildren(
+    ...skill.technologies.map((technology) => {
+      const article = document.createElement("article");
+      const title = document.createElement("h3");
+      const description = document.createElement("p");
+
+      title.textContent = technology.name;
+      description.textContent = technology.experience;
+      article.append(title, description);
+      return article;
     }),
   );
 
-  const tagList = skillDialog.querySelector(".skill-dialog-tags");
-  tagList.replaceChildren(
-    ...skill.tags.map((tag) => {
-      const item = document.createElement("span");
-      item.textContent = tag;
-      return item;
-    }),
-  );
-
-  const videoWrap = skillDialog.querySelector(".skill-video-wrap");
-  const video = skillDialog.querySelector(".skill-dialog-video");
-  const caption = skillDialog.querySelector(".skill-video-caption");
-
-  video.pause();
-  video.removeAttribute("src");
-  video.load();
-
-  if (skill.video) {
-    video.src = skill.video;
-    caption.textContent = skill.videoCaption;
-    videoWrap.hidden = false;
+  const projectLink = skillDialog.querySelector(".skill-modal-project-link");
+  if (skill.project) {
+    projectLink.textContent = (skill.projectLabel || "관련 프로젝트") + " 보기 →";
+    projectLink.hidden = false;
+    projectLink.onclick = () => {
+      closeModal(skillDialog, false);
+      openProject(skill.project);
+    };
   } else {
-    videoWrap.hidden = true;
+    projectLink.hidden = true;
+    projectLink.onclick = null;
   }
+
+  const previousButton = skillDialog.querySelector(".skill-modal-prev");
+  const nextButton = skillDialog.querySelector(".skill-modal-next");
+  previousButton.querySelector("strong").textContent = previousCategory.shortLabel;
+  nextButton.querySelector("strong").textContent = nextCategory.shortLabel;
+  previousButton.onclick = () => {
+    openSkill(previousCategory.id);
+  };
+  nextButton.onclick = () => {
+    openSkill(nextCategory.id);
+  };
 
   openModal(skillDialog);
 }
@@ -701,15 +936,7 @@ document.querySelectorAll(".award-trigger").forEach((item) => {
   item.addEventListener("click", () => openAward(item.dataset.award));
 });
 
-document.querySelectorAll(".skill-row, .skill-category[data-skill]").forEach((item) => {
-  item.addEventListener("click", () => openSkill(item.dataset.skill));
-  item.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" || event.key === " ") {
-      event.preventDefault();
-      openSkill(item.dataset.skill);
-    }
-  });
-});
+initSkillDonut();
 
 closeButton.addEventListener("click", () => closeModal(dialog));
 paperCloseButton.addEventListener("click", () => closeModal(paperDialog));
@@ -742,7 +969,9 @@ skillDialog.addEventListener("click", (event) => {
 
 skillDialog.addEventListener("close", () => {
   const video = skillDialog.querySelector(".skill-dialog-video");
-  video.pause();
+  if (video) {
+    video.pause();
+  }
 });
 
 dialog.addEventListener("close", () => {
