@@ -9,6 +9,8 @@ const awardDialog = document.querySelector(".award-dialog");
 const awardCloseButton = document.querySelector(".award-dialog-close");
 const skillDialog = document.querySelector(".skill-dialog");
 const skillCloseButton = document.querySelector(".skill-dialog-close");
+const researchVideo = document.querySelector(".research-photo-card video");
+const researchVideoToggle = document.querySelector(".video-toggle");
 
 const projects = {
   "drone-coder": {
@@ -469,20 +471,6 @@ const techCategories = [
     linePoints: "476,296 510,352 652,352",
   },
   {
-    id: "uav",
-    label: "UAV & ROBOTICS",
-    shortLabel: "UAV & Robotics",
-    technologies: ["PX4 SITL", "MAVLink", "Crazyflie Nano Drone"],
-    weight: 22,
-    color: "#ff9b54",
-    side: "left",
-    boxX: 0,
-    boxY: 326,
-    startAngle: 176,
-    endAngle: 255,
-    linePoints: "295,354 248,396 92,396",
-  },
-  {
     id: "simulation",
     label: "SIMULATION",
     shortLabel: "Simulation",
@@ -495,6 +483,20 @@ const techCategories = [
     startAngle: 263,
     endAngle: 286,
     linePoints: "208,218 164,220 46,220",
+  },
+  {
+    id: "uav",
+    label: "UAV & ROBOTICS",
+    shortLabel: "UAV & Robotics",
+    technologies: ["PX4 SITL", "MAVLink", "Crazyflie Nano Drone"],
+    weight: 22,
+    color: "#ff9b54",
+    side: "left",
+    boxX: 0,
+    boxY: 326,
+    startAngle: 176,
+    endAngle: 255,
+    linePoints: "295,354 248,396 92,396",
   },
 ];
 

@@ -288,6 +288,7 @@ h3 {
 }
 
 .profile-media-grid figure {
+  position: relative;
   display: grid;
   gap: 8px;
   min-width: 0;
@@ -321,6 +322,35 @@ h3 {
   max-height: 320px;
   background: #000;
   object-fit: contain;
+}
+
+.video-toggle {
+  position: absolute;
+  right: 10px;
+  bottom: 34px;
+  min-height: 32px;
+  padding: 0 12px;
+  border: 1px solid color-mix(in srgb, var(--line) 74%, var(--accent));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  color: var(--text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 850;
+  backdrop-filter: blur(10px);
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.video-toggle:hover,
+.video-toggle:focus-visible {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: #07120f;
+  outline: none;
 }
 
 .profile-media-grid figcaption {
