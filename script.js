@@ -225,6 +225,22 @@ const papers = {
     publication: "2025년 11월 · 논문 및 연구",
     url: "assets/papers/tensorrt-yolov11-jetson.pdf",
   },
+  "target-azimuth-journal": {
+    category: "학회지",
+    title: "전투 차량 포신 방향 인식을 위한 심층 신경망 기반 표적 방위각 추정 기법",
+    summary:
+      "전투 차량의 포신 방향 인식을 기반으로 표적 방위각을 추정하는 심층 신경망 기반 연구입니다.",
+    abstract:
+      "UAV 영상 기반 객체 인식 결과를 활용하여 전투 차량의 포신 방향을 인식하고, 이를 표적 방위각 추정 문제와 연결하는 연구입니다. 실제 환경 적용 가능성을 고려해 시각 인지 AI 기반 방위각 추정 흐름을 정리했습니다.",
+    contribution: [
+      "전투 차량 포신 방향 인식 문제 정의",
+      "심층 신경망 기반 표적 방위각 추정 흐름 구성",
+      "UAV 영상 기반 객체 인식 연구 성과의 학회지 확장",
+    ],
+    keywords: ["Target Azimuth", "Deep Neural Network", "UAV Perception", "Object Detection"],
+    publication: "학회지 · 논문 및 연구",
+    url: "",
+  },
 };
 
 const awards = {
